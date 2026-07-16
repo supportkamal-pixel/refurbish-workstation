@@ -1,0 +1,1896 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Premium Workstation Setup Quotation — Kamal Kant Tiwari</title>
+<!-- Google Fonts -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ✅ KKT ULTRA PRO THEME VARIABLES */
+:root {
+  --bg: #0d0d1a;
+  --card: rgba(255,255,255,0.04);
+  --border: rgba(255,255,255,0.10);
+  --gold: #f7c948;
+  --green: #00e676; 
+  --brand-new: #00b8d4;
+  --text: #f0f0f0;
+  --muted: #888;
+  --amz-red: #cc0c39;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:linear-gradient(135deg,#0d0d1a 0%,#151530 60%,#0a1020 100%); color:var(--text); min-height:100vh; overflow-x: hidden; }
+
+/* ✅ HIDE SCROLLBAR BUT KEEP SCROLLING & LOCK BACKGROUND */
+::-webkit-scrollbar { display: none; }
+* { -ms-overflow-style: none; scrollbar-width: none; }
+body.modal-open { overflow: hidden; }
+
+/* ✅ बैकग्राउंड पार्टिकल्स एनीमेशन */
+body::before { content:''; position:fixed; top:0;left:0;width:100%;height:100%; background:radial-gradient(circle at 20% 20%,rgba(0,184,212,.08) 0%,transparent 50%),radial-gradient(circle at 80% 80%,rgba(0,80,157,.08) 0%,transparent 50%); pointer-events:none; z-index:0; }
+.particles { position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:hidden; }
+.particle { position:absolute;border-radius:50%;background:rgba(0,184,212,.2);animation:pFloat linear infinite; }
+@keyframes pFloat { 0%{transform:translateY(100vh) rotate(0deg);opacity:0} 10%,90%{opacity:1} 100%{transform:translateY(-10vh) rotate(720deg);opacity:0} }
+
+.wrap { max-width:1400px;margin:0 auto;padding:20px;position:relative;z-index:1; }
+
+/* ✅ ब्रांड हेडर */
+.brand-hdr {
+  padding: 10px 26px; border: none; 
+  box-shadow: inset -2px 0px 10px rgba(78, 171, 42, 0.1), 0 12px 40px rgba(0, 0, 0, 0.6);
+  background: linear-gradient(to right, #05131c 0%, #05131c 120px, rgba(2, 66, 91, 0.95) 180px, rgba(78, 171, 42, 0.15) 100% );
+  border-radius:16px; margin-bottom:20px; display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:16px; backdrop-filter:blur(20px);
+}
+.bl { display:flex;align-items:center;gap:14px; }
+.av { width: 130px; height: 130px; position: relative; margin-left: -30px; margin-top: -25px; margin-bottom: -22px; z-index: 100; }
+.kkt-logo-img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(4px 6px 6px rgba(0, 0, 0, 0.65)); animation: heartbeat 2.5s infinite ease-in-out; }
+@keyframes heartbeat { 0% { transform: scale(1); } 15% { transform: scale(1.08); } 30% { transform: scale(1); } 45% { transform: scale(1.05); } 60% { transform: scale(1); } 100% { transform: scale(1); } }
+.bn { font-size:20px;font-weight:800;background:linear-gradient(135deg,#fff,var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text; }
+.bs { font-size:10px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:2px;margin-top:2px; }
+.br { display:flex;align-items:center;gap:18px;flex-wrap:wrap; }
+.cr { display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(255,255,255,.85); }
+.qref { background:rgba(247,201,72,.14);border:1px solid rgba(247,201,72,.3);border-radius:8px;padding:6px 12px;text-align:center; }
+.ql { font-size:8px;color:var(--gold);text-transform:uppercase;letter-spacing:1px; }
+.qv { font-size:13px;font-weight:700;color:#fff; }
+
+@media (max-width: 768px) {
+  .brand-hdr { padding: 10px 15px; background: linear-gradient(to right, #05131c 0%, #05131c 80px, rgba(2, 66, 91, 0.95) 140px, rgba(78, 171, 42, 0.15) 100%); margin-bottom: 20px; }
+  .av { width: 90px; height: 90px; margin-left: -20px; margin-top: -15px; margin-bottom: -15px; }
+  .bn { font-size: 18px; margin-bottom: 2px; }
+  .bs { font-size: 9px; line-height: 1.2; }
+  .br-desktop-items { display: none !important; }
+  .mob-only-phone { display: block !important; }
+}
+
+/* 🚀 CLEANED: SETUP TOGGLE BUTTONS (Single Layout Maintained) */
+.setup-toggle-box { display: flex; gap: 15px; justify-content: center; margin-bottom: 25px; flex-wrap: wrap; }
+.setup-btn { flex: 1; min-width: 250px; max-width: 400px; padding: 16px; border-radius: 12px; font-size: 16px; font-weight: 800; cursor: pointer; transition: 0.3s; text-align: center; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.4); color: #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.3); position: relative; overflow: hidden; }
+.btn-short-name { display: none; }
+.btn-full-name { display: inline; }
+@media (max-width: 768px) {
+    .model-select-box { gap: 10px !important; }
+    .setup-btn { min-width: 0 !important; max-width: none !important; padding: 12px 8px !important; font-size: 14px !important; }
+    .btn-short-name { display: inline; }
+    .btn-full-name { display: none; }
+}
+/* Hover Effects */
+.setup-btn:hover { border-color: var(--gold); }
+
+/* Hide inactive view smoothly */
+.setup-view { display: none; animation: fadeInView 0.5s ease-in-out; }
+.setup-view.active { display: block; }
+@keyframes fadeInView { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ✅ MAIN DASHBOARD (Top Section) */
+.dashboard-top { display: flex; flex-direction: column; gap: 20px; margin-bottom: 30px; }
+
+.dash-left { flex: 1; background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 25px; backdrop-filter: blur(10px); }
+.dash-right { flex: 1; background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 25px; backdrop-filter: blur(10px); }
+
+.badge { display:inline-block; background:rgba(0,184,212,.15); color:var(--brand-new); padding:5px 14px; border-radius:50px; font-size:11px; font-weight:800; letter-spacing:1px; text-transform:uppercase; margin-bottom:12px; border:1px solid rgba(0,184,212,.3); }
+h1.pkg-title { font-size:clamp(24px, 3vw, 36px); font-weight:900; color:#fff; line-height:1.2; margin-bottom: 8px; }
+
+/* Pricing Box */
+.price-box { border-top: 1px dashed rgba(255,255,255,0.1); padding-top: 20px; }
+.price-row { display: flex; align-items: baseline; gap: 12px; margin-bottom: 15px; }
+.kkt-price { font-size: 38px; font-weight: 900; color: #fff; text-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+.discount-badge { color: var(--amz-red); font-weight: 800; font-size: 24px; }
+.tax-box { background:rgba(0,230,118,0.08); border:1px dashed #00e676; border-radius:8px; padding:15px; display:flex; justify-content:space-between; align-items:center; }
+
+/* ✅ SMART INVISIBLE SCROLLBAR (ONLY SHOWS ON HOVER) */
+.feat-list { 
+  list-style: none; 
+  margin-top: 15px; 
+  max-height: 990px;
+  overflow-y: auto; 
+  padding-right: 12px; 
+  /* Firefox के लिए स्मार्ट स्क्रॉल */
+  scrollbar-width: thin; 
+  scrollbar-color: transparent transparent; 
+  transition: scrollbar-color 0.4s ease;
+}
+
+.feat-list:hover {
+  scrollbar-color: rgba(0, 184, 212, 0.068) transparent; /* होवर पर हल्का सा दिखेगा */
+}
+
+/* Chrome/Edge/Safari के लिए स्मार्ट स्क्रॉल */
+.feat-list::-webkit-scrollbar { 
+  width: 4px; /* और भी पतला और स्लीक (sleek) कर दिया */
+  background: transparent; 
+}
+
+.feat-list::-webkit-scrollbar-track { 
+  background: transparent; /* ट्रैक पूरी तरह से गायब */
+}
+
+.feat-list::-webkit-scrollbar-thumb { 
+  background: transparent; /* डिफ़ॉल्ट रूप से थंब भी गायब (Invisible) */
+  border-radius: 10px; 
+  transition: background 0.4s ease; 
+}
+
+.feat-list:hover::-webkit-scrollbar-thumb { 
+  background: rgba(0, 184, 212, 0.25); /* कार्ड पर माउस जाने पर एकदम लाइट / सटल कलर में दिखेगा */
+  box-shadow: none; /* डार्क शैडो हटा दी ताकि हैवी न लगे */
+}
+
+.feat-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 184, 212, 0.6); /* अगर कोई स्क्रॉल बार के ऊपर ही माउस ले जाए तो थोड़ा डार्क होगा */
+}
+
+.feat-list li { font-size: 14px; color: #fff; margin-bottom: 12px; padding-left: 28px; position: relative; line-height: 1.5; font-weight: 500; }
+.feat-list li::before { content: '✅'; position: absolute; left: 0; top: 1px; font-size: 14px; }
+.feat-list li strong { color: var(--gold); }
+
+/* ✅ HARDWARE GRID SYSTEM */
+.section-title { font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+.section-title::before { content: ''; width: 5px; height: 25px; background: var(--brand-new); border-radius: 5px; }
+
+.hardware-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 40px; }
+.hw-card { background: rgba(0,0,0,0.4); border: 1px solid var(--border); border-radius: 14px; padding: 20px; text-align: center; transition: 0.3s; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; }
+.hw-card:hover { transform: translateY(-5px); border-color: var(--brand-new); box-shadow: 0 10px 30px rgba(0, 184, 212, 0.15); }
+
+.hw-title { font-size: 16px; font-weight: 800; color: #fff; margin-bottom: 5px; }
+.hw-desc { font-size: 12.5px; color: var(--muted); margin-bottom: 5px; line-height: 1.4; }
+
+/* 🚀 Prices hidden as requested, only Badges will be rendered */
+.card-price-box { margin-bottom: 12px; padding-top: 8px; border-top: 1px dashed rgba(255,255,255,0.1); display:flex; flex-direction:column; align-items:center; }
+
+.btn-view { background: transparent; border: 1px solid var(--brand-new); color: var(--brand-new); font-weight: 700; padding: 10px 15px; border-radius: 8px; cursor: pointer; transition: 0.3s; width: 100%; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin-top: auto; }
+.btn-view:hover { background: var(--brand-new); color: #000; box-shadow: 0 0 15px rgba(0, 184, 212, 0.4); }
+
+.it-profile { background: linear-gradient(135deg, rgba(247,201,72,0.04) 0%, rgba(247,201,72,0.12) 100%); border: 1px solid rgba(247,201,72,0.4); border-radius: 14px; padding: 25px; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 5px 25px rgba(247,201,72,0.08); position: relative; overflow: hidden; transition: 0.3s; }
+.it-profile:hover { box-shadow: 0 8px 35px rgba(247,201,72,0.2); border-color: rgba(247,201,72,0.8); transform: translateY(-3px); }
+.it-title { font-size: 18px; font-weight: 900; color: var(--gold); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+.it-list { list-style:none; position: relative; z-index: 2; }
+.it-list li { font-size: 13.5px; color: rgba(255,255,255,0.9); margin-bottom: 10px; padding-left: 24px; position: relative; line-height: 1.5; font-weight: 500; }
+.it-list li::before { content:'✔'; position:absolute; left:0; color:var(--gold); font-size:13px; font-weight:900; }
+
+@media (min-width: 1200px) { .hw-info-card { grid-column: span 2; } }
+
+/* ✅ SMART POPUP MODAL (Intact) */
+/* ✅ PRO FIX: Flexbox Alignment + GPU Acceleration (कोई Absolute पोजीशन नहीं, कोई ग्लिच नहीं) */
+.modal-overlay { display: none; align-items: center; justify-content: center; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+
+.modal-box { position: relative; width: 95%; max-width: 1100px; height: 90%; background: #0f172a; border: 1px solid rgba(0, 184, 212, 0.4); border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.8); display: flex; flex-direction: column; overflow: hidden; transform: translateZ(0); backface-visibility: hidden; will-change: transform; }
+@media (min-width: 800px) { .modal-box { flex-direction: row; } }
+.modal-close { position: absolute; top: 10px; right: 20px; color: #fff; font-size: 35px; font-weight: bold; cursor: pointer; z-index: 100; transition: 0.3s; }
+.modal-close:hover { color: var(--amz-red); transform: scale(1.1); }
+.modal-left { width: 100%; height: 45%; background: #ffffff; display: flex; flex-direction: column; position: relative; padding: 15px; }
+/* ✅ PRO FIX: डेस्कटॉप के लिए विड्थ 45% से 50% कर दी गई है */
+@media (min-width: 900px) { .modal-left { width: 50%; height: 100%; border-right: 1px solid var(--border); } }
+.m-main-view { flex: 1; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.modal-main-img { max-width: 90%; max-height: 90%; object-fit: contain; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15)); transition: 0.3s; }
+.m-controls { display: flex; justify-content: center; gap: 20px; padding: 10px; }
+.m-prev, .m-next { background: rgba(0,184,212,0.15); color: #fff; font-size: 18px; font-weight: 900; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 50%; cursor: pointer; border: 1px solid rgba(0,184,212,0.5); backdrop-filter: blur(4px); transition: 0.3s; }
+.m-prev:hover, .m-next:hover { background: var(--brand-new); color: #000; }
+.m-thumb-row { display: flex; gap: 8px; overflow-x: auto; padding: 10px 0; height: 80px; align-items: center; justify-content: center; }
+.m-thumb { width: 60px; height: 60px; border: 2px solid transparent; border-radius: 6px; cursor: pointer; padding: 2px; transition: 0.3s; opacity: 0.6; }
+.m-thumb img { width: 100%; height: 100%; object-fit: contain; }
+.m-thumb.active { border-color: var(--brand-new); opacity: 1; box-shadow: 0 0 10px rgba(0,184,212,0.4); }
+.modal-right { width: 100%; height: 55%; padding: 25px; padding-bottom: 10px; display: flex; flex-direction: column; overflow: hidden; } 
+/* ✅ PRO FIX: डेस्कटॉप के लिए विड्थ 55% से 50% कर दी गई है */
+@media (min-width: 900px) { .modal-right { width: 50%; height: 100%; } }
+.m-title { font-size: 22px; font-weight: 900; color: #fff; margin-bottom: 5px; flex-shrink: 0; }
+.m-sub { font-size: 13px; color: var(--muted); margin-bottom: 20px; flex-shrink: 0; }
+.m-tabs { display: flex; flex-wrap: wrap; gap: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 20px; padding-bottom: 10px; flex-shrink: 0; }
+.m-tab-btn { flex: 1; min-width: max-content; background: transparent; border: none; color: var(--muted); font-size: 14.5px; font-weight: 800; cursor: pointer; padding: 8px 10px; transition: 0.3s; position: relative; white-space: nowrap; text-align: center; }
+.m-tab-btn.active { color: var(--gold); }
+.m-tab-btn.active::after { content: ''; position: absolute; bottom: -11px; left: 0; width: 100%; height: 2px; background: var(--gold); }
+.m-tab-content { display: none; animation: fadeIn 0.4s ease; flex-grow: 1; overflow-y: auto; padding-right: 10px; padding-bottom: 20px; }
+.m-tab-content.active { display: block; }
+.m-spec-group { font-size: 12px; color: var(--brand-new); text-transform: uppercase; letter-spacing: 1px; margin: 15px 0 8px 0; border-bottom: 1px dashed rgba(0,184,212,0.3); padding-bottom: 4px; }
+.m-spec-row { display: flex; padding: 6px 0; border-bottom: 1px dashed rgba(255,255,255,0.05); font-size: 13px; }
+.m-spec-key { width: 40%; color: var(--muted); font-weight: 500; }
+.m-spec-val { width: 60%; color: #fff; font-weight: 600; }
+
+.action-btns { display:flex; gap:12px; margin-top:15px; }
+.btn-call { flex:1; background:linear-gradient(135deg, #00b259, #008a45); color:#fff; font-weight:800; padding:15px; border-radius:10px; text-align:center; text-decoration:none; display:block; font-size:16px; border:1px solid #00e676; transition:0.3s; }
+.btn-wa, .btn-wa-smart { flex:1; background:linear-gradient(135deg, #25D366, #128C7E); color:#fff; font-weight:800; padding:15px; border-radius:10px; text-align:center; text-decoration:none; display:block; font-size:16px; border:1px solid #4FCE5D; transition:0.3s; }
+
+.kkt-footer { background: rgba(10, 75, 168, 0.45); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 12px; padding: 25px 20px; text-align: center; margin-top: 20px; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); width: 100%; }
+.kf-badge { display: inline-block; border: 2px solid var(--gold); color: var(--gold); font-weight: 800; padding: 6px 18px; border-radius: 8px; font-size: 14px; letter-spacing: 2px; margin-bottom: 15px; transform: rotate(-3deg); background: rgba(0, 0, 0, 0.15); }
+.kf-name { font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 4px; }
+.kf-sub { font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.9); margin-bottom: 20px; }
+.kf-contact { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; font-size: 13px; font-weight: 600; color: #fff; margin-bottom: 20px; }
+.kf-contact a { color: #fff; text-decoration: none; }
+.kf-meta { font-size: 11px; color: rgba(255,255,255,0.7); line-height: 1.6; }
+
+.hero-slider-box { width: 100%; height: 440px; background: radial-gradient(circle at center, #1a1a3a 0%, #080815 100%); border-radius: 12px; margin-bottom: 20px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(0, 184, 212, 0.25); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(0, 184, 212, 0.15); }
+.hero-slider-box::before { content: ''; position: absolute; width: 200%; height: 200%; background: radial-gradient(rgba(0, 184, 212, 0.2) 1.5px, transparent 0); background-size: 24px 24px; animation: matrixMove 12s linear infinite; pointer-events: none; z-index: 1; }
+@keyframes matrixMove { 0% { transform: translate(0, 0); opacity: 0.5; } 50% { opacity: 0.9; } 100% { transform: translate(-24px, -24px); opacity: 0.5; } }
+.h-slide { position: absolute; max-width: 92%; max-height: 92%; object-fit: contain; opacity: 0; transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out; transform: scale(0.96); z-index: 2; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6)); }
+.h-slide.active { opacity: 1; transform: scale(1.02); }
+
+.m-nav-arrow { position: absolute; top: 50%; transform: translateY(-50%); font-size: 28px; font-weight: 900; color: #fff; background: rgba(0,0,0,0.6); border: 2px solid var(--brand-new); width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; cursor: pointer; z-index: 10000; transition: 0.3s; backdrop-filter: blur(5px); }
+.m-nav-arrow.left { left: 10px; }
+.m-nav-arrow.right { right: 10px; }
+.m-nav-arrow:hover { background: var(--brand-new); color: #000; box-shadow: 0 0 20px rgba(0,184,212,0.6); transform: translateY(-50%) scale(1.1); }
+@media(min-width: 1200px) { .m-nav-arrow.left { left: 30px; } .m-nav-arrow.right { right: 30px; } }
+
+.m-main-view { position: relative; background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%); overflow: hidden; }
+
+.hw-title { font-size: 16px; font-weight: 800; color: #fff; margin-bottom: 5px; }
+.hw-img-box::after, .hero-slider-box::after, .m-main-view::after { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 55%; height: 55%; background-image: url('https://res.cloudinary.com/dje4iytsn/image/upload/v1782749801/new_bcavrg.png'); background-size: contain; background-repeat: no-repeat; background-position: center; opacity: 0.12; pointer-events: none; z-index: 10; filter: drop-shadow(0 0 10px rgba(255,255,255,0.2)) grayscale(100%); }
+
+@media (max-width: 768px) {
+  .m-tabs { display: flex !important; flex-wrap: nowrap !important; gap: 8px !important; }
+  .m-tab-btn { flex: 1 !important; font-size: 12px !important; padding: 10px 5px !important; white-space: normal !important; line-height: 1.2 !important; }
+  .m-title { font-size: 17px !important; line-height: 1.3 !important; }
+  .m-sub { font-size: 11px !important; margin-bottom: 10px !important; }
+  .m-nav-arrow, .m-controls { display: none !important; }
+  .m-thumb-row { justify-content: flex-start !important; padding-bottom: 8px !important; -webkit-overflow-scrolling: touch; }
+  .m-thumb { flex: 0 0 auto !important; }
+  .modal-left { height: 42% !important; padding: 10px !important; }
+  .modal-right { height: 58% !important; padding: 15px !important; }
+}
+
+/* ==============================================================
+   🚀 KKT DYNAMIC RIGHT-PANEL PRESENTATION LOOP (PRO LEVEL)
+   ============================================================== */
+.it-profile { 
+  display: flex; 
+  flex-direction: column;
+}
+/* ✅ 1. Lighter Info Card Background & Transparent Right Column */
+.it-profile { background-color: rgba(255, 255, 255, 0.08) !important; } /* इन्फो कार्ड को हल्का सा ब्राइट करने के लिए */
+@media (min-width: 992px) {
+  .it-profile { flex-direction: row; align-items: stretch; gap: 30px; }
+  .it-left-col { width: 55%; flex-shrink: 0; }
+  .it-right-col { width: 45%; position: relative; display: flex; align-items: center; justify-content: center; background: transparent; border: none; overflow: hidden; }
+}
+@media (max-width: 991px) {
+  .it-right-col { width: 100%; height: 250px; margin-top: 20px; position: relative; display: flex; align-items: center; justify-content: center; background: transparent; border: none; overflow: hidden; }
+}
+
+/* ✅ 2. The Loop Container */
+.kkt-loop-scene {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  opacity: 0; visibility: hidden; padding: 10px; text-align: center;
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out, transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(0.95);
+}
+.kkt-loop-scene.active { opacity: 1; visibility: visible; transform: scale(1); }
+
+/* ✅ 3. SCENE 1: Smart QR Scanner */
+.qr-box { background: #fff; padding: 10px; border-radius: 10px; margin-bottom: 10px; box-shadow: 0 0 20px rgba(0, 230, 118, 0.4); animation: pulseGlow 2s infinite; }
+.qr-box img { width: 120px; height: 120px; object-fit: contain; }
+.qr-text { font-size: 14px; font-weight: 800; color: var(--green); text-transform: uppercase; letter-spacing: 1px; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
+@keyframes pulseGlow { 0% { box-shadow: 0 0 10px rgba(0, 230, 118, 0.2); } 50% { box-shadow: 0 0 25px rgba(0, 230, 118, 0.6); } 100% { box-shadow: 0 0 10px rgba(0, 230, 118, 0.2); } }
+
+/* ✅ 4. SCENE 2: 360° Globe Logo (Clean & Sharp) */
+.globe-logo-box { perspective: 1000px; margin-bottom: 15px; display: flex; justify-content: center; }
+.globe-logo { 
+  width: 130px; 
+  height: 130px; 
+  object-fit: contain; 
+  animation: globeSpin 5s linear infinite; 
+  transform-style: preserve-3d;
+  /* चमक और बैकग्राउंड हटा दिया, सिर्फ रोटेशन बचेगा */
+  filter: none; 
+  background: transparent;
+  border-radius: 0;
+}
+@keyframes globeSpin { from { transform: rotateY(0deg); } to { transform: rotateY(360deg); } }
+.holo-text { font-size: 15px; font-weight: 900; color: #fff; text-shadow: 0 0 10px var(--brand-new); }
+.holo-sub { font-size: 11px; color: rgba(255,255,255,0.7); }
+
+/* ✅ 5. SCENE 3: Animated Counters */
+.stat-row { display: flex; flex-direction: column; gap: 15px; width: 100%; align-items: center; }
+.stat-item { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 8px; width: 80%; display: flex; align-items: center; justify-content: space-between; }
+.stat-num { font-size: 24px; font-weight: 900; color: var(--gold); }
+.stat-label { font-size: 12px; color: #fff; font-weight: 600; text-transform: uppercase; }
+
+/* ✅ 6. SCENE 4: Dynamic Brands Image Logo (Bigger, Centered & Whitish Shadow Active) */
+.brands-title { font-size: 13px; font-weight: 800; color: rgba(255,255,255,0.6); text-transform: uppercase; margin-bottom: 20px; letter-spacing: 2px; text-align: center; width: 100%; }
+.brand-logo-img { max-width: 280px; max-height: 140px; object-fit: contain; margin: 0 auto; display: block; filter: drop-shadow(0 10px 4px rgba(0, 0, 0, 0.45)); }
+/* 3D Spin Fade Animation for Images (Overriding Filter Cleared) */
+.brand-animate { animation: brandSpinFadeImg 2.5s ease-in-out forwards; }
+@keyframes brandSpinFadeImg { 
+  0% { opacity: 0; transform: perspective(400px) rotateX(90deg) scale(0.5); }
+  20% { opacity: 1; transform: perspective(400px) rotateX(0deg) scale(1.1); }
+  80% { opacity: 1; transform: perspective(400px) rotateX(0deg) scale(1); }
+  100% { opacity: 0; transform: perspective(400px) rotateX(-90deg) scale(0.8); }
+}
+
+/* ✅ PRO SPECIFICATION CARD & YOUTUBE BUTTON */
+
+.spec-pro-card {
+    background: rgba(25, 25, 30, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+.spec-pro-card:hover {
+    border-color: rgba(0, 184, 212, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 184, 212, 0.15);
+}
+.spec-top-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.spec-main-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 8px;
+    padding: 5px;
+}
+.spec-details h4 {
+    color: #fff;
+    font-size: 16px;
+    margin: 0 0 5px 0;
+    font-weight: 700;
+}
+.spec-details p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+    margin: 0;
+    line-height: 1.4;
+}
+/* 🔥 The Ultra-Pro YouTube Button */
+.yt-pro-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #ff0000, #cc0000);
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+}
+.yt-pro-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.5);
+    background: linear-gradient(135deg, #ff1a1a, #e60000);
+}
+.yt-icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+/* ✅ PRO FIX: View Full Specs - 50/50 Equal Width Layout for Desktop */
+@media (min-width: 768px) {
+    .modal-body {
+        flex-direction: row !important;
+    }
+    .m-left {
+        width: 50% !important;
+        max-width: 50% !important;
+        border-right: 1px solid rgba(0, 184, 212, 0.2) !important; /* दोनों के बीच एक प्रीमियम डिवाइडर */
+    }
+    .m-right {
+        width: 50% !important;
+        max-width: 50% !important;
+    }
+}
+
+/* 🚀 ULTRA-PRO FIX: FULL FRAME YOUTUBE (NO CROP, NO CLICKS, NO UI FLASH) */
+.video-container-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: transparent; 
+    border-radius: inherit;
+}
+
+.video-container-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    opacity: 0; /* शुरुआत में वीडियो छुपा रहेगा ताकि यूट्यूब का लोगो न दिखे */
+    animation: revealCleanVideo 0.5s ease 2.5s forwards; /* 2.5 सेकंड बाद जब UI हट जाएगा, तब वीडियो दिखेगा */
+}
+
+@keyframes revealCleanVideo {
+    to { opacity: 1; }
+}
+
+.ghost-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 20;
+    /* ✅ सबसे बड़ा बदलाव: pointer-events: none हटा दिया गया है। 
+       अब यह एक मजबूत शीशे की तरह काम करेगा। सारा क्लिक यहीं ब्लॉक हो जाएगा, यूट्यूब तक नहीं पहुंचेगा। */
+}
+
+/* 🚀 ULTRA-PRO FIX: DISABLE TEXT SELECTION */
+body {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none;     /* IE 10 and IE 11 */
+    user-select: none;         /* Standard syntax */
+    -webkit-touch-callout: none; /* Mobile पर लॉन्ग प्रेस मेन्यू को रोकेगा */
+}
+
+/* 🚀 PRO FOMO POPUP STYLES (GLASS & ANIMATIONS) */
+.fomo-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4); 
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 9999;
+    display: none; /* डिफ़ॉल्ट रूप से छुपा रहेगा */
+    align-items: center;
+    justify-content: center;
+    animation: fadeInFomo 0.4s ease-out;
+}
+
+.fomo-box {
+    position: relative;
+    background: rgba(26, 26, 26, 0.85); 
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 30px 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 215, 0, 0.3); 
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5), 0 0 20px rgba(255, 215, 0, 0.1);
+    max-width: 90%;
+    width: 360px;
+    text-align: center;
+    animation: floatPopup 4s ease-in-out infinite; 
+}
+
+.fomo-sparkle {
+    position: absolute;
+    top: -15px; left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    animation: pulseSparkle 2s infinite;
+}
+
+.fomo-btn {
+    border: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    flex: 1;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.whatsapp-btn {
+    background: #25D366;
+    color: #000;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.call-btn {
+    background: linear-gradient(135deg, var(--gold), #ff9800);
+    color: #000;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.fomo-btn:active { transform: scale(0.95); }
+
+@keyframes fadeInFomo {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes floatPopup {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes pulseSparkle {
+    0% { transform: translateX(-50%) scale(1); opacity: 0.8; }
+    50% { transform: translateX(-50%) scale(1.2); opacity: 1; text-shadow: 0 0 10px var(--gold); }
+    100% { transform: translateX(-50%) scale(1); opacity: 0.8; }
+}
+
+/* ==============================================================
+   🚀 PATCH 1: LIGHT THEME VARIABLES & TOP BAR CSS
+   ============================================================== */
+
+/* 🌐 TOP TOOLS BAR (Custom UI) */
+.top-tools-bar { display: flex; justify-content: flex-end; align-items: center; gap: 15px; margin-bottom: 20px; }
+.kkt-btn-top { background: rgba(0,0,0,0.4); border: 1px solid var(--border); color: var(--text); padding: 8px 15px; border-radius: 8px; cursor: pointer; font-weight: 700; font-size: 13px; font-family: 'Inter'; transition: 0.3s; display: flex; align-items: center; gap: 8px; outline: none; }
+.kkt-btn-top:hover { border-color: var(--brand-new); box-shadow: 0 0 10px rgba(0,184,212,0.2); }
+
+/* ==============================================================
+   🚀 PATCH 1.1: GOOGLE TRANSLATE BANNER NUKE (ULTRA PRO FIX)
+   ============================================================== */
+
+/* गूगल ट्रांसलेट का विजेट और ऊपर आने वाली फालतू पट्टी पूरी तरह से गायब करने के लिए */
+#google_translate_element { display: none !important; }
+.goog-te-banner-frame { display: none !important; visibility: hidden !important; }
+.skiptranslate > iframe.skiptranslate { display: none !important; visibility: hidden !important; }
+
+/* गूगल को हमारी बॉडी (पेज) को 40px नीचे धकेलने से सख्ती से रोकने के लिए */
+body { top: 0px !important; position: static !important; }
+
+/* ट्रांसलेटेड शब्द पर माउस ले जाने पर आने वाले 'Original Text' टूलटिप और हाईलाइट को छुपाने के लिए */
+#goog-gt-tt, .goog-te-balloon-frame { display: none !important; }
+.goog-text-highlight { background-color: transparent !important; box-shadow: none !important; }
+/* ==============================================================
+   🚀 PATCH 2.1: 3-TIER PRO CONFIGURATOR CSS
+   ============================================================== */
+.kkt-pro-config { display: flex; flex-direction: column; width: 100%; }
+.kkt-cfg-btn { flex: 1; min-width: 110px; padding: 12px 10px; text-align: center; border-radius: 8px; font-size: 13.5px; font-weight: 800; cursor: pointer; transition: 0.3s; background: rgba(0,0,0,0.6); color: #fff; border: 1px solid rgba(255,255,255,0.2); }
+.kkt-cfg-btn:hover { border-color: var(--brand-new); }
+.kkt-cfg-btn.active-cpu { background: linear-gradient(135deg, #0052D4, #4364F7); border-color: #6FB1FC; box-shadow: 0 5px 15px rgba(0, 82, 212, 0.4); }
+.kkt-cfg-btn.active-ram { background: linear-gradient(135deg, #11998e, #38ef7d); border-color: #00e676; color:#000; box-shadow: 0 5px 15px rgba(17, 153, 142, 0.4); }
+.kkt-cfg-btn.active-qty { background: linear-gradient(135deg, #f7c948, #f57c00); border-color: #f7c948; color:#000; box-shadow: 0 5px 15px rgba(247, 201, 72, 0.4); }
+
+/* ==============================================================
+   🚀 PATCH 3.1: KKT PRO MEDIA GALLERY (AMAZON STYLE)
+   ============================================================== */
+#kkt-gallery-container { width: 100%; margin-bottom: 20px; display: flex; flex-direction: column; gap: 10px; }
+
+/* Main Media Box (बड़ा थंबनेल) */
+.kkt-main-media-box { width: 100%; height: 500px; background: radial-gradient(circle at center, #1a1a2e 0%, #0d0d1a 55%, #050508 100%); border-radius: 12px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); padding: 25px; }
+.kkt-main-media-box img, .kkt-main-media-box video, .kkt-main-media-box iframe { max-height: calc(100% - 50px); max-width: calc(100% - 50px); object-fit: contain; }
+
+/* Thumbnails Row (नीचे के छोटे बॉक्स) */
+.kkt-thumb-row { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 5px; scrollbar-width: none; }
+.kkt-thumb-row::-webkit-scrollbar { display: none; }
+
+.kkt-thumb { width: 70px; height: 70px; border-radius: 8px; border: 2px solid transparent; cursor: pointer; position: relative; overflow: hidden; opacity: 0.6; transition: 0.3s; background: #000; flex-shrink: 0; }
+.kkt-thumb:hover { opacity: 1; border-color: rgba(0,184,212,0.5); }
+.kkt-thumb.active { opacity: 1; border-color: var(--brand-new); box-shadow: 0 0 10px rgba(0,184,212,0.4); }
+
+/* Icons for Video & 360 */
+.kkt-media-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.6); padding: 5px; border-radius: 50%; font-size: 14px; }
+
+/* ==============================================================
+   🚀 PATCH 4.1: KKT PRO TABS (TECH & FEATURES)
+   ============================================================== */
+.kkt-tabs-header { display: flex; gap: 10px; border-bottom: 2px solid var(--border); margin-bottom: 15px; }
+.kkt-tab-btn { background: transparent; color: var(--muted); border: none; font-size: 14px; font-weight: 800; padding: 10px 20px; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; border-bottom: 3px solid transparent; margin-bottom: -2px; }
+.kkt-tab-btn:hover { color: var(--text); }
+.kkt-tab-btn.active { color: var(--brand-new); border-bottom: 3px solid var(--brand-new); }
+
+.kkt-tab-pane { display: none; animation: fadeInTab 0.4s ease-in-out; }
+.kkt-tab-pane.active { display: flex; flex-direction: column; flex: 1; min-height: 0; overflow-y: auto; padding-right: 5px; }
+@keyframes fadeInTab { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Ultra Pro Dynamic Scrollbar Tuning */
+.kkt-pro-feat-list { list-style: none; padding-right: 5px; margin: 0; }
+.kkt-tab-pane::-webkit-scrollbar { width: 5px; }
+.kkt-tab-pane::-webkit-scrollbar-thumb { background: var(--brand-new); border-radius: 10px; }
+.kkt-pro-feat-list li { font-size: 13px; color: rgba(255,255,255,0.85); margin-bottom: 12px; padding-left: 28px; position: relative; line-height: 1.5; font-weight: 500; }
+.kkt-pro-feat-list li::before { content: '🔥'; position: absolute; left: 0; top: 1px; font-size: 14px; }
+.kkt-pro-feat-list li strong { color: var(--gold); }
+
+/* =======================================================
+   🚀 FINAL MASTER FIX: STRICT SIDE-BY-SIDE SCROLL LOCK
+   ======================================================= */
+@media (min-width: 992px) {
+    /* 1. Main Container: सिर्फ लेफ्ट कार्ड ही इसकी हाइट तय करेगा */
+    .dashboard-top {
+        display: flex !important;
+        position: relative !important;
+        justify-content: space-between !important;
+        align-items: flex-start !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* 2. Left Card: गैप कम करने के लिए विड्थ बढ़ाई गई है (Right Card की साइज को छेड़े बिना) */
+    .dash-left {
+        width: calc(51% - 7px) !important;
+        flex: none !important;
+        margin-bottom: 0 !important;
+    }
+
+    /* 3. Right Wrapper: लेफ्ट कार्ड के बराबर (100% Height) पर लॉक होगा */
+    .dash-right-wrapper {
+        position: absolute !important;
+        top: 0 !important;
+        right: 0 !important;
+        width: 49% !important;
+        height: 100% !important; 
+        display: flex !important;
+        flex-direction: column !important;
+        margin-top: 0 !important;
+    }
+
+    /* 4. Right Card: (CRITICAL FIX) इसे बाहर झांकने से रोकेगा */
+    .dash-right {
+        flex: 1 1 0 !important;
+        min-height: 0 !important; 
+        display: flex !important;
+        flex-direction: column !important;
+        margin-bottom: 0 !important;
+    }
+
+    /* 5. Tab Pane: 50 फीचर्स सिर्फ इसी के अंदर स्क्रोल होंगे, फुटर तक नहीं जाएंगे */
+    .kkt-tab-pane.active {
+        flex: 1 1 0 !important;
+        min-height: 0 !important; 
+        overflow-y: auto !important;
+        display: block !important;
+        padding-right: 8px !important;
+    }
+}
+
+/* Mobile View Reset */
+@media (max-width: 991px) {
+    .dashboard-top { display: flex !important; flex-direction: column !important; position: static !important; }
+    .dash-left { width: 100% !important; margin-bottom: 20px !important; }
+    .dash-right-wrapper { width: 100% !important; position: static !important; height: auto !important; }
+    .dash-right, .kkt-tab-pane.active { flex: none !important; min-height: auto !important; overflow-y: visible !important; }
+}
+
+/* 🖥️ Model Selector Button Active State */
+.setup-btn.active {
+    background: linear-gradient(135deg, #00b8d4, #006064) !important;
+    border-color: #fff !important;
+    box-shadow: 0 0 15px rgba(0, 184, 212, 0.6) !important;
+    transform: translateY(-2px);
+    color: #fff !important;
+}
+
+/* ==========================================
+   🚀 KKT LIGHTBOX & ZOOM GALLERY CSS
+========================================== */
+.kkt-lb-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at center, #1a1a2e 0%, #0d0d1a 55%, #050508 100%); z-index: 999999;
+    display: none; justify-content: center; align-items: center;
+    opacity: 0; transition: opacity 0.3s ease; backdrop-filter: blur(5px);
+}
+.kkt-lb-overlay.active { display: flex; opacity: 1; }
+
+.kkt-lb-close {
+    position: absolute; top: 20px; right: 30px; color: #fff;
+    font-size: 35px; cursor: pointer; z-index: 100000; transition: 0.2s;
+}
+.kkt-lb-close:hover { color: var(--brand-new, #00b8d4); transform: scale(1.1); }
+
+/* Desktop Navigation Arrows */
+.kkt-lb-nav {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    color: #fff; font-size: 40px; cursor: pointer; user-select: none;
+    padding: 15px 25px; background: rgba(0,0,0,0.6); border-radius: 8px;
+    z-index: 100000; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.1);
+}
+.kkt-lb-nav:hover { background: var(--brand-new, #00b8d4); border-color: #fff; }
+.kkt-lb-nav.left { left: 30px; }
+.kkt-lb-nav.right { right: 30px; }
+
+/* Media Container & Zoom Physics */
+.kkt-lb-content {
+    width: 90vw; height: 90vh; position: relative;
+    display: flex; justify-content: center; align-items: center;
+    overflow: hidden; touch-action: none; /* Crucial for custom pinch/swipe */
+}
+.kkt-lb-content img, .kkt-lb-content video, .kkt-lb-content iframe {
+    max-width: 100%; max-height: 100%; border-radius: 0;
+    filter: drop-shadow(0 18px 22px rgba(0,0,0,0.55));
+    transition: transform 0.1s ease-out; /* Smooth wheel zoom */
+    transform-origin: center center; cursor: grab;
+}
+.kkt-lb-content img:active { cursor: grabbing; }
+
+/* Mobile adjustments (Hide arrows, rely on swipe) */
+@media (max-width: 768px) {
+    .kkt-lb-nav { display: none !important; } 
+    .kkt-lb-close { top: 15px; right: 20px; font-size: 30px; }
+    .kkt-lb-content { width: 100vw; height: 100vh; border-radius: 0; }
+    .kkt-lb-content img { border-radius: 0; }
+}
+
+/* थंबनेल के अंदर के फालतू आइकन को पूरी तरह गायब करने के लिए */
+.kkt-thumb .kkt-media-icon:empty {
+    display: none !important;
+}
+
+/* अगर फिर भी बटन दिख रहा है, तो ये लाइन उसे पक्का हटा देगी */
+.kkt-media-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* नीचे वाली लाइन पक्का हटा देगी अगर आइकन खाली है */
+}
+
+</style>
+</head>
+<body>
+<div class="particles" id="particles"></div>
+<div class="wrap">
+
+<!-- 👑 Brand Header -->
+<div class="brand-hdr">
+  <div class="bl">
+    <div class="av" title="Kamal Kant Tiwari">
+      <img id="kktLogo" class="kkt-logo-img" src="https://res.cloudinary.com/dje4iytsn/image/upload/v1782749801/new_bcavrg.png" alt="KKT Logo">
+    </div>
+    <div>
+      <div class="bn">Kamal Kant Tiwari</div>
+      <div class="bs">Pro-Level IT Workstations & Security</div>
+      <div class="mob-only-phone" style="display: none; margin-top: 6px; font-size: 13.5px;">
+        <span style="color:#00e676; margin-right:4px;">📞</span><a href="tel:+919920300531" style="color: #b00303; text-decoration: none; font-weight: 800;">+91 9920 300 531</a>
+      </div>
+    </div>
+  </div>
+  <div class="br" style="display:flex; align-items:center; gap:18px;">
+    
+    <div style="display:flex; flex-direction:column; align-items:flex-start; gap:8px;">
+      <div class="cr br-desktop-items">📞 <a href="tel:+919920300531" style="color: var(--gold); text-decoration: none;"><strong>+91 9920 300 531</strong></a></div>
+      
+      <div id="google_translate_element" style="display:none;"></div>
+      <select class="notranslate" id="customLangSelect" onchange="changeKktLanguage(this.value)" style="background: rgba(0,0,0,0.6); border: 1px solid rgba(0,184,212,0.4); color: #fff; padding: 5px 12px; border-radius: 6px; font-size: 12px; font-weight: 700; cursor: pointer; outline: none; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+          <option value="en">🇺🇸 English (EN)</option>
+          <option value="hi">🇮🇳 हिंदी (HI)</option>
+          <option value="mr">🚩 मराठी (MR)</option>
+          <option value="gu">🦁 ગુજરાતી (GU)</option>
+          <option value="ta">🛕 தமிழ் (TA)</option>
+      </select>
+    </div>
+
+    <div class="qref br-desktop-items"><div class="ql">Quote Ref</div><div class="qv">#KKT-REF_SER-701</div></div>
+    
+  </div>
+</div>
+
+<!-- ============================================== -->
+<!-- 🔴 DELL SETUP VIEW (Hidden by default)          -->
+<!-- ============================================== -->
+<div id="dell-setup" class="setup-view active">
+  <div class="dashboard-top">
+    <div class="dash-left">
+      <div class="badge">💡 24/7 AI & Rendering Workstation</div>
+      <h1 class="pkg-title">Dell Precision 7920 Tower</h1>
+      <div id="kkt-gallery-container">
+          <div id="kkt-main-media" class="kkt-main-media-box">
+              </div>
+          <div id="kkt-thumb-row" class="kkt-thumb-row">
+              </div>
+      </div>
+
+      <!-- 🖥️ MODEL SELECTOR BUTTONS -->
+      <div class="model-select-box" style="display: flex; gap: 15px; justify-content: center; margin-bottom: 25px;">
+          <button class="setup-btn intel active" onclick="switchModel('7920')" id="btn-7920"><span class="btn-full-name">Dell Precision 7920</span><span class="btn-short-name">7920</span></button>
+          <button class="setup-btn intel" onclick="switchModel('t5810')" id="btn-t5810"><span class="btn-full-name">Dell Precision T5810</span><span class="btn-short-name">T5810</span></button>
+      </div>
+
+    <div class="setup-toggle-box kkt-pro-config" style="margin-top: 20px; margin-bottom: 20px; background: rgba(0,0,0,0.4); padding: 20px; border-radius: 12px; border: 1px solid var(--border);">
+      
+      <div class="config-group" style="margin-bottom: 15px; width: 100%;">
+        <div style="font-size: 12px; font-weight: 800; color: var(--muted); text-transform: uppercase; margin-bottom: 8px; letter-spacing: 1px;">1. Processor (CPU)</div>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <div class="kkt-cfg-btn active-cpu" onclick="setKktConfig('cpu', 'dual')" id="cfg-cpu-dual">Dual Xeon (40 Cores)</div>
+          <div class="kkt-cfg-btn" onclick="setKktConfig('cpu', 'single')" id="cfg-cpu-single">Single Xeon (20 Cores)</div>
+        </div>
+      </div>
+
+      <div class="config-group" style="margin-bottom: 15px; width: 100%;">
+        <div style="font-size: 12px; font-weight: 800; color: var(--muted); text-transform: uppercase; margin-bottom: 8px; letter-spacing: 1px;">2. Memory (RAM)</div>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <div class="kkt-cfg-btn active-ram" onclick="setKktConfig('ram', '64')" id="cfg-ram-64">64GB ECC RAM</div>
+          <div class="kkt-cfg-btn" onclick="setKktConfig('ram', '32')" id="cfg-ram-32">32GB ECC RAM</div>
+        </div>
+      </div>
+
+      <div class="config-group" style="width: 100%;">
+        <div style="font-size: 12px; font-weight: 800; color: var(--muted); text-transform: uppercase; margin-bottom: 8px; letter-spacing: 1px;">3. Quantity (Volume Discount)</div>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <div class="kkt-cfg-btn active-qty" onclick="setKktConfig('qty', 1)" id="cfg-qty-1">1 Unit</div>
+          <div class="kkt-cfg-btn" onclick="setKktConfig('qty', 2)" id="cfg-qty-2">2 Units</div>
+          <div class="kkt-cfg-btn" onclick="setKktConfig('qty', 3)" id="cfg-qty-3">3 Units</div>
+          <div class="kkt-cfg-btn" onclick="setKktConfig('qty', 4)" id="cfg-qty-4">4 Units</div>
+        </div>
+      </div>
+
+    </div>
+          
+
+      <div class="price-box" data-platform="dell" style="min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+        <div id="price-result-box" style="border-bottom: 2px solid rgba(255, 152, 0, 0.3); padding-bottom: 15px;">
+          <div style="font-size: clamp(14px, 4vw, 16px); font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">Quotation Grand Total</div>
+          <div style="display: flex; align-items: baseline; gap: 15px; margin-bottom: 5px;">
+              <div id="valOriginalPayable" style="color: #ff5252; font-size: 20px; font-weight: 600; text-decoration: line-through; opacity: 0.7;">₹ 0.00</div>
+              <div id="valFinalPayable" style="color: #ff9800; font-size: clamp(38px, 6vw, 46px); font-weight: 900; line-height: 1.1; text-shadow: 0 4px 15px rgba(0,0,0,0.5);">₹ 0.00</div>
+          </div>
+          
+          <div id="discountTag" style="font-size: 14px; font-weight: 700; color: #00e676; margin-top: 5px; display: none;">
+              🎉 Bulk Discount Applied (You Save <span id="discountAmount">₹ 0</span>)
+          </div>
+          </div>
+
+        <!-- 📌 IMPORTANT NOTE SECTION -->
+        <div class="quotation-notice-box" style="margin-top: 15px; background: rgba(255, 152, 0, 0.08); border-left: 4px solid #ff9800; border-radius: 6px; padding: 12px 15px; text-align: left;">
+            <div style="font-size: clamp(13px, 3.5vw, 15px); color: #ff9800; font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; display: flex; align-items: center; gap: 5px;">
+                📌 IMPORTANT NOTE
+            </div>
+            <ul style="margin: 0; padding-left: 18px; color: rgba(255,255,255,0.9); font-size: clamp(11px, 3vw, 12.5px); line-height: 1.5; font-style: italic; font-weight: bold;">
+                <li style="margin-bottom: 8px;">All product images, 3D renders, and video clips used in this quotation are strictly for <span style="color: #00b8d4;">reference and visual demonstration purposes only</span>.</li>
+                <li>The final total estimated price is <span style="color: #ff1744;">subject to change</span> in the event of sudden market price fluctuations (hikes or drops), complete stock unavailability, or official component model number revisions by the manufacturer.</li>
+            </ul>
+        </div>
+        
+       
+      </div>
+    </div>
+    <div class="dash-right-wrapper" style="display: flex; flex-direction: column; flex: 1; gap: 15px;">
+      <div class="dash-right" style="flex: 1; margin-bottom: 0;">
+        
+        <div class="kkt-tabs-header">
+            <button class="kkt-tab-btn active" id="btn-tab-feat" onclick="switchKktTab('feat')">🌟 Pro Features</button>
+            <button class="kkt-tab-btn" id="btn-tab-tech" onclick="switchKktTab('tech')">⚙️ Tech Specs</button>
+        </div>
+
+        <div id="pane-feat" class="kkt-tab-pane active">
+            <ul class="kkt-pro-feat-list">
+                <li><strong>Dual Socket Architecture:</strong> Intel C621 chipset natively supports massive dual-CPU multithreading operations perfectly.</li>
+                <li><strong>Xeon Gold 6138 Dominance:</strong> 20 Cores & 40 Threads per CPU (Total 40C/80T in Dual mode) to crush any rendering or AI workload.</li>
+                <li><strong>Enterprise ECC Memory:</strong> Error-Correcting Code RAM automatically detects and fixes data corruption, ensuring 24/7 server stability.</li>
+                <li><strong>Quadro P4000 8GB Graphics:</strong> ISV-Certified professional GPU designed specifically for flawless CAD, SolidWorks, and Maya 3D rendering.</li>
+                <li><strong>1400W Hot-Swappable PSU:</strong> Server-grade 80-Plus Gold power supply that can be swapped without opening the main chassis compartment.</li>
+                <li><strong>Tool-less Chassis Design:</strong> Fully modular internal layout allowing you to add drives or RAM instantly without using a single screwdriver.</li>
+                <li><strong>Dell RMT Pro Technology:</strong> Reliable Memory Technology isolates defective memory sectors in real-time, preventing blue screen crashes.</li>
+                <li><strong>FlexBay Storage Access:</strong> Front-accessible storage bays allow hot-swapping or SATA drives while the system is running.</li>
+                <li><strong>Massive PCIe Gen 3 Lanes:</strong> Plentiful bandwidth for adding multiple capture cards, extra GPUs, or high-speed networking adapters.</li>
+                <li><strong>Advanced Thermal Design:</strong> Multi-channel airflow cooling architecture keeps both massive CPUs well below thermal throttling limits.</li>
+                <li><strong>Intel VROC Support:</strong> Virtual RAID on CPU capabilities for extreme  storage speed and redundancy.</li>
+                <li><strong>High-Speed Gigabit LAN:</strong> Integrated dual Intel MACs for teaming, load balancing, and failover network configurations.</li>
+                <li><strong>Hardware-Level Security:</strong> Integrated TPM 2.0 (Trusted Platform Module) keeping business data mathematically encrypted.</li>
+                <li><strong>Windows 11 Pro Ready:</strong> Pre-configured with professional OS licensing to seamlessly integrate into corporate active directories.</li>
+                <li><strong>Heavy Payload Capacity:</strong> Supports up to 3TB of total RAM (when using LRDIMM), giving you insane future upgrade headroom.</li>
+                <li><strong>Independent Cooling Zones:</strong> The PSU and storage bays have their own cooling paths, separated from the CPU and GPU heat exhaust.</li>
+                <li><strong>Acoustically Optimized:</strong> Despite being a powerhouse server, it runs astonishingly quiet in a standard office environment.</li>
+                <li><strong>Aluminum Carrying Handles:</strong> Built-in structural handles make moving this heavy-duty workstation extremely safe and easy.</li>
+                <li><strong>VR & AI Ready:</strong> Enough computational density to run complex machine learning models or Virtual Reality environments locally.</li>
+                <li><strong>Professional Diagnostics:</strong> Dell's onboard diagnostics button instantly scans hardware health without needing to boot into Windows.</li>
+                <li><strong>Massive 512GB  Speed:</strong> Primary OS drive delivers blazing fast boot times and instant application loading.</li>
+                <li><strong>Four-Channel Memory Architecture:</strong> Multi-channel memory pathways per CPU eliminate bandwidth bottlenecks completely.</li>
+                <li><strong>Legacy Port Compatibility:</strong> Features extensive I/O including serial ports, massive USB arrays, and professional audio jacks.</li>
+                <li><strong>1 Month Hardware Warranty:</strong> Complete peace of mind with 1-month carry-in testing warranty directly from our shop.</li>
+                <li><strong>Stress-Tested Refurbished:</strong> Each machine is run under 100% synthetic load for 48 hours to guarantee absolute rock-solid reliability.</li>
+                <li><strong>Dedicated Graphics VRAM:</strong> The 8GB GDDR5 buffer on the P4000 ensures smooth viewport panning in extremely large 3D projects.</li>
+                <li><strong>Single-Cable GPU Power:</strong> Clean internal aesthetics with efficient power delivery directly from the proprietary Dell motherboard.</li>
+                <li><strong>High Core-to-Watt Efficiency:</strong> Xeon processors deliver unmatched computational power while maintaining responsible electricity draw.</li>
+                <li><strong>Premium B2B Workstation:</strong> This is not a gaming PC; it's a dedicated money-making machine built for studios and corporate labs.</li>
+                <li><strong>Bulk Volume Discounts:</strong> Buy 2 or more units to automatically unlock heavy enterprise-level pricing discounts.</li>
+                <li><strong>Enterprise Chassis Lock:</strong> Physical padlock loop and Kensington lock slot to prevent unauthorized access to internal hardware.</li>
+                <li><strong>Modular Front I/O:</strong> Easy access to USB 3.1 Type-A, Type-C, and audio jacks directly on the front panel.</li>
+                <li><strong>Multi-Display Multi-Tasking:</strong> The Quadro P4000 easily drives up to four 4K displays simultaneously for massive workspace spread.</li>
+                <li><strong>Dell Precision Optimizer:</strong> AI-based performance tuning software automatically adjusts system settings based on the application you are using.</li>
+                <li><strong>Robust PCI-e Slot Reinforcement:</strong> Solid steel slots prevent heavy GPUs and expansion cards from sagging over time.</li>
+                <li><strong>Zero-Downtime Maintenance:</strong> The hot-swap power supply and tool-less drive bays mean upgrades take seconds, not hours.</li>
+                <li><strong>Advanced Vector Extensions (AVX-512):</strong> Accelerates high-performance computing workloads, cryptographic algorithms, and deep learning operations.</li>
+                <li><strong>Unmatched I/O Scalability:</strong> Add optional Thunderbolt 3 PCIe cards for extreme bandwidth connections to external storage arrays.</li>
+                <li><strong>Oversized CPU Heatsinks:</strong> Dell's custom tower heatsinks provide massive thermal mass to absorb instant heat spikes during rendering.</li>
+                <li><strong>Integrated SATA/SAS Controller:</strong> Native support for high-capacity enterprise hard drives in complex RAID configurations.</li>
+                <li><strong>Dedicated PCIe Power Cables:</strong> No messy daisy-chaining; pure, direct power lines from the 1400W PSU to the GPU.</li>
+                <li><strong>Built-in Speaker:</strong> Diagnostic speaker built into the front panel for post-code beeps and basic audio output without external speakers.</li>
+                <li><strong>Clean Cable Management:</strong> Proprietary motherboard design routes all power and data through the back PCB, leaving zero clutter.</li>
+                <li><strong>Intelligent Fan Control:</strong> System dynamically adjusts RPM of individual fans based on localized temperature sensors across the board.</li>
+                <li><strong>Premium Aluminum & Steel Build:</strong> No cheap plastic; the entire chassis is constructed from heavy-gauge metals for zero vibration.</li>
+                <li><strong>Hardware Health Telemetry:</strong> Full integration with enterprise monitoring software to track temperature, voltage, and lifespan remotely.</li>
+                <li><strong>Certified by Autodesk & Adobe:</strong> Officially tested and certified to run the most demanding creative suites without crashing.</li>
+                <li><strong>Dynamic Power Allocation:</strong> The 1400W PSU intelligently routes power to components that need it most during uneven workloads.</li>
+                <li><strong>Gold-Plated Internal Contacts:</strong> Ensures maximum electrical conductivity and prevents corrosion over years of 24/7 operation.</li>
+                <li><strong>Rapid Boot Architecture:</strong> Optimized UEFI BIOS skips unnecessary checks to bring this massive server online in seconds.</li>
+            </ul>
+        </div>
+
+        <div id="pane-tech" class="kkt-tab-pane">
+            <div class="specs-grid-table" style="border: 1px solid rgba(0,184,212,0.3); border-radius: 8px; background: rgba(0,0,0,0.2); padding: 15px;">
+               <div style="margin-bottom: 30px; border: 1px solid rgba(0,184,212,0.3); border-radius: 12px; background: rgba(0,0,0,0.3); overflow: hidden;">
+                      <div style="background: rgba(0,184,212,0.1); padding: 10px; text-align: center; font-size: 13px; font-weight: 800; color: var(--brand-new); border-bottom: 1px solid rgba(0,184,212,0.3);">HARDWARE CONFIGURATION</div>
+                      <div style="display: grid; grid-template-columns: 1fr 1px 1fr; align-items: center; padding: 10px;">
+                          <div style="padding: 10px;">
+                              <div style="margin-bottom: 12px; font-size: 13px;"><span style="color:var(--brand-new); margin-right:8px;">🧠</span>CPU: <span style="color:#fff; font-weight:600;" id="tab-spec-cpu">Dual Xeon 6138</span></div>
+                              <div style="margin-bottom: 12px; font-size: 13px;"><span style="color:var(--brand-new); margin-right:8px;">💾</span>RAM: <span style="color:#fff; font-weight:600;" id="tab-spec-ram">64GB ECC</span></div>
+                              <div style="font-size: 13px;"><span style="color:var(--brand-new); margin-right:8px;">⚡</span>PSU: <span style="color:#fff; font-weight:600;">1400W SMPS</span></div>
+                          </div>
+                          <div style="height: 80%; width: 1px; background: rgba(0,184,212,0.3);"></div>
+                          <div style="padding: 10px;">
+                              <div style="margin-bottom: 12px; font-size: 13px;"><span style="color:var(--brand-new); margin-right:8px;">📂</span>SSD: <span style="color:#fff; font-weight:600;">512GB </span></div>
+                              <div style="margin-bottom: 12px; font-size: 13px;"><span style="color:var(--brand-new); margin-right:8px;">🎮</span>GPU: <span style="color:#fff; font-weight:600;">Quadro P4000</span></div>
+                              <div style="font-size: 13px;"><span style="color:var(--brand-new); margin-right:8px;">🪟</span>OS: <span style="color:#fff; font-weight:600;">Win 11 Pro</span></div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="m-spec-group">Full Technical Specifications</div>
+                  <ul class="kkt-pro-feat-list" style="margin-top:10px; list-style: none;">
+                      <li><strong>CPU Architecture:</strong> Skylake-SP Microarchitecture for high-instruction-per-clock performance.</li>
+                      <li><strong>Core Scaling:</strong> Native support for dual socket multi-processing without cache latency.</li>
+                      <li><strong>ECC Logic:</strong> Hardware-level data integrity checking for continuous 24/7 rendering.</li>
+                      <li><strong>PCIe Bandwidth:</strong> Full x16 Gen3 speeds maintained on all primary expansion slots.</li>
+                      <li><strong>Thermal Monitoring:</strong> On-die digital thermal sensors for precision fan control.</li>
+                      <li><strong>OS Optimization:</strong> Windows 11 Pro kernel tuned for massive thread count distribution.</li>
+                      <li><strong> Throughput:</strong> Optimized PCIe path for sub-millisecond storage access.</li>
+                      <li><strong>ECC Correction:</strong> Single-bit error correction and double-bit error detection.</li>
+                      <li><strong>Power Density:</strong> High-efficiency VRMs to handle 1400W peak load demand.</li>
+                      <li><strong>Quadro Driver Stack:</strong> Stable Enterprise drivers for CAD/CAM software consistency.</li>
+                      <li><strong>Workstation Chassis:</strong> Dell Precision engineering for electromagnetic interference shielding.</li>
+                      <li><strong>Memory Bus:</strong> 6-Channel memory architecture for maximum data throughput.</li>
+                      <li><strong>GPU Interconnect:</strong> Direct-attach power delivery for Quadro P4000 stability.</li>
+                      <li><strong>IO Latency:</strong> Low-latency chipset bus for real-time sensor processing.</li>
+                      <li><strong>Cache Hierarchy:</strong> Shared L3 cache across all 40 physical cores.</li>
+                      <li><strong>Instruction Sets:</strong> AVX-512 support for heavy scientific calculation.</li>
+                      <li><strong>Reliability:</strong> RMT Pro memory isolation for preventing critical system failures.</li>
+                      <li><strong>Chassis Airflow:</strong> Front-to-back straight-through cooling design.</li>
+                      <li><strong>Power Rails:</strong> Multi-rail 12V distribution for clean current delivery.</li>
+                      <li><strong>OS Support:</strong> Full driver stack validation for Microsoft OS environments.</li>
+                      <li><strong>Storage Controller:</strong> SATA/SAS RAID support for data redundancy.</li>
+                      <li><strong>VRM Cooling:</strong> Active heatsink cooling on voltage regulator modules.</li>
+                      <li><strong>System Management:</strong> Integrated Dell Remote Access Controller (iDRAC) ready.</li>
+                      <li><strong>Mechanical Build:</strong> Rigid steel frame with noise-dampening panels.</li>
+                      <li><strong>Signal Integrity:</strong> High-density multi-layer PCB for stable signal transmission.</li>
+                      <li><strong>Power Efficiency:</strong> 80-Plus Gold certification for lower operational heat.</li>
+                      <li><strong>Bus Speed:</strong> 2666MT/s RAM speed for optimal CPU-RAM synchronization.</li>
+                      <li><strong>Expandability:</strong> Massive internal volume for future dual-GPU upgrades.</li>
+                      <li><strong>Port Reliability:</strong> Industry-standard shielded USB and display ports.</li>
+                      <li><strong>OS Security:</strong> TPM 2.0 based encryption for drive and file safety.</li>
+                      <li><strong>Firmware:</strong> UEFI BIOS with advanced debugging and diagnostic features.</li>
+                      <li><strong>Component Life:</strong> Industrial-grade capacitors for long-term endurance.</li>
+                      <li><strong>Noise Floor:</strong> Acoustic-optimized fans for minimal operational noise.</li>
+                      <li><strong>Data Bus:</strong> Wide-bus architecture for large rendering datasets.</li>
+                      <li><strong>Visual Output:</strong> Quad-display support via Quadro P4000 interface.</li>
+                      <li><strong>Thermal Thresholds:</strong> Intelligent auto-throttling to prevent permanent damage.</li>
+                      <li><strong>Cable Routing:</strong> Dedicated cable management channels for unobstructed airflow.</li>
+                      <li><strong>Boot Integrity:</strong> Secure boot technology to prevent OS-level tampering.</li>
+                      <li><strong>User Access:</strong> Tool-free side panel access for rapid hardware maintenance.</li>
+                      <li><strong>Expansion Logic:</strong> Configurable PCIe lane assignment via BIOS settings.</li>
+                      <li><strong>Operational Temp:</strong> Tested for stability in high-ambient-temperature environments.</li>
+                      <li><strong>Vibration Control:</strong> Rubberized shock-absorbing mounts for all hard drives.</li>
+                      <li><strong>Power Delivery:</strong> 1400W headroom prevents power-spiking during high load.</li>
+                      <li><strong>Data Throughput:</strong> Massive internal bandwidth for simultaneous I/O tasks.</li>
+                      <li><strong>Graphics VRAM:</strong> GDDR5 dedicated buffer for large texture rendering.</li>
+                      <li><strong>Reliability Standard:</strong> ISV certified hardware for mission-critical software.</li>
+                      <li><strong>Driver Stability:</strong> Consistent enterprise-grade software release cycles.</li>
+                      <li><strong>Chassis Rigidity:</strong> Zero-flex structural design for port alignment.</li>
+                      <li><strong>Diagnostics:</strong> Error-reporting LED codes on motherboard.</li>
+                      <li><strong>Scalability:</strong> Modular storage cage for up to 4 additional drives.</li>
+                  </ul>
+               </div>
+            </div>
+
+      </div>
+      <div class="action-btns" style="margin-top: auto;">
+        <a href="tel:+919920300531" class="btn-call">📞 Call to Book</a>
+        <a href="#" onclick="sendDynamicWhatsApp(); return false;" class="btn-wa-smart">💬 WhatsApp Now</a>
+      </div>
+    </div>
+  </div>
+
+<div class="hw-info-card it-profile" style="margin-top: 10px; margin-bottom: 30px;">
+  
+  <div class="it-left-col">
+    <div class="it-title">💼 IT & Security Services by KKT</div>
+    <ul class="it-list">
+        <li><strong>Brand New & Refurbished:</strong> Laptops, Desktops, Monitor, Workstations & Printers & Many More...</li>
+        <li><strong>Custom Workstations:</strong> Heavy-duty builds for CA Offices, 3D Designing, DTP, Gaming PC, Also For Other Requirements.</li>
+        <li><strong>Enterprise Networking:</strong> LAN Setup & Architecture, Router Configurations.</li>
+        <li><strong>Server Management:</strong> OS Installations, Tally.Prime & Software Setups.</li>
+        <li><strong>Corporate IT Support:</strong> Complete IT Hardware Setup & AMC Services.</li>
+        <li><strong>Hardware Repairing:</strong> All Types Of Repairing of Desktop & Laptops Motherboard, Screen Replacement.</li>
+    </ul>
+  </div>
+
+  <div class="it-right-col">
+    
+    <div class="kkt-loop-scene active" id="scene-qr">
+      <div class="qr-box">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3ATiwari%3BKamal+Kant%0AORG%3AKKT+IT+Services%0ATEL%3BTYPE%3DWORK%2CMSG%3A%2B919920300531%0AURL%3Ahttps%3A%2F%2Fwa.me%2F919920300531%0AEND%3AVCARD" alt="Scan to Save">
+      </div>
+      <div class="qr-text">Scan To Save & Chat 🚀</div>
+    </div>
+
+    <div class="kkt-loop-scene" id="scene-tech">
+      <div class="globe-logo-box">
+        <img class="globe-logo" src="https://res.cloudinary.com/dje4iytsn/image/upload/v1782749801/new_bcavrg.png" alt="KKT Logo 3D">
+      </div>
+      <div class="holo-text">PRO HARDWARE SETUP</div>
+      <div class="holo-sub">Workstations • Servers • Networking</div>
+    </div>
+
+    <div class="kkt-loop-scene" id="scene-stats">
+      <div class="stat-row">
+        <div class="stat-item"><span class="stat-num">500+</span><span class="stat-label">Projects</span></div>
+        <div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">Genuine</span></div>
+        <div class="stat-item"><span class="stat-num">24/7</span><span class="stat-label">Support</span></div>
+      </div>
+    </div>
+
+    <div class="kkt-loop-scene" id="scene-brands">
+      <div class="brands-title">IT Solutions & Security Systems Integrator</div>
+      <img id="dynamic-brand-img" class="brand-logo-img" src="" alt="Brand Logo">
+    </div>
+
+  </div> </div>
+
+<script> 
+    // 🚀 ULTRA-PRO SMART SEQUENCE CONTROLLER
+    
+    const scenes = ["scene-tech", "scene-brands", "scene-qr", "scene-stats"];
+    let currentScene = 0;
+    
+    const totalLogos = 54; 
+    const baseUrl = "https://res.cloudinary.com/dje4iytsn/image/upload/logo-"; 
+    const imageExtension = ".png";
+    
+    let brandIdx = 1;
+    let brandTimer;
+    const brandImgElement = document.getElementById("dynamic-brand-img");
+
+    // 1. ब्रांड्स प्ले करने वाला फंक्शन 
+    function startBrandCycle() {
+        if(brandTimer) clearInterval(brandTimer);
+        brandIdx = 1; 
+        
+        const showNextBrand = () => {
+            if (brandIdx > totalLogos) {
+                brandIdx = 1; 
+            }
+
+            brandImgElement.classList.remove("brand-animate");
+            void brandImgElement.offsetWidth; // एनीमेशन रिसेट
+            
+            brandImgElement.src = baseUrl + brandIdx + imageExtension;
+            brandImgElement.classList.add("brand-animate");
+            
+            brandIdx++;
+        };
+        
+        showNextBrand();
+        brandTimer = setInterval(showNextBrand, 2000); 
+    }
+
+    // 2. स्मार्ट सीन स्विचर (OVERLAP FIX)
+    function switchScene() {
+        scenes.forEach(sceneId => {
+            document.getElementById(sceneId).classList.remove("active");
+        });
+        
+        let nextSceneId = scenes[currentScene];
+        document.getElementById(nextSceneId).classList.add("active");
+
+        let nextDelay = 6000; 
+
+        if(nextSceneId === "scene-brands") {
+            startBrandCycle();
+            nextDelay = totalLogos * 2000; 
+        } else {
+            if(brandTimer) clearInterval(brandTimer); 
+        }
+
+        currentScene = (currentScene + 1) % scenes.length;
+
+        setTimeout(switchScene, nextDelay);
+    }
+
+    // 3. AUTO-TRIGGER
+    document.addEventListener("DOMContentLoaded", function() {
+        switchScene();
+    });
+
+</script>
+
+<div id="componentModal" class="modal-overlay">
+  <div class="m-nav-arrow left" onclick="navigateCard(-1)">&#10094;</div>
+  <div class="m-nav-arrow right" onclick="navigateCard(1)">&#10095;</div>
+  <div class="modal-box">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <div class="modal-left">
+      <div class="m-main-view">
+        <img id="mImg" class="modal-main-img" src="" alt="Product">
+        <iframe id="mVideo" src="" style="display:none; width:100%; height:100%; min-height:250px; border:none;" allowfullscreen></iframe>
+      </div>
+      <div class="m-controls">
+        <span class="m-prev" onclick="modalImgSlide(-1)">&#10094;</span>
+        <span class="m-next" onclick="modalImgSlide(1)">&#10095;</span>
+      </div>
+      <div class="m-thumb-row" id="mThumbRow"></div>
+    </div>
+    <div class="modal-right">
+      <div class="m-title" id="mTitle">Product Title</div>
+      <div class="m-sub" id="mSub">Product Subtitle</div>
+      <div class="m-tabs">
+        <button class="m-tab-btn active" onclick="switchModalTab('m-feat', this)">🌟 Features</button>
+        <button class="m-tab-btn" onclick="switchModalTab('m-tech', this)">⚙️ Full Tech Specs</button>
+      </div>
+      <div id="m-feat" class="m-tab-content active">
+        <ul class="feat-list" id="mFeatList"></ul>
+      </div>
+      <div id="m-tech" class="m-tab-content">
+        <div id="mTechHtml"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="kkt-footer">
+    <div class="kf-badge">QUOTATION</div>
+    <div class="kf-name">Kamal Kant Tiwari</div>
+    <div class="kf-sub">High-Performance IT Workstations & Server Setup</div>
+    <div class="kf-contact">
+      <div><span style="color:#f50057; margin-right:5px;">📞</span> <a href="tel:+919920300531">+91 9920 300 531</a></div>
+      <div><span style="color:#fff; margin-right:5px;">✉️</span> <a href="mailto:supportkamal@gmail.com">supportkamal@gmail.com</a></div>
+      <div><span style="color:#ff1744; margin-right:5px;">📍</span> Malad West, Mumbai – 400064 IN Maharashtra, India</div>
+    </div>
+    <div class="kf-meta">
+      Quotation Ref: #KKT-REF_SER-701 | Prices mentioned are final net prices without hidden taxes.<br>
+      © 2026 Kamal Kant Tiwari — All rights reserved.
+    </div>
+</div>
+
+<div id="fomoPopup" class="fomo-overlay" style="display:none;">
+    <div class="fomo-box">
+        <div class="fomo-sparkle">✨</div>
+        <h2 style="color:var(--gold); font-size:22px; margin-bottom:10px; line-height:1.2;">Wait! Don't Lose Your Perfect PC Build...</h2>
+        <p style="font-size:13px; margin-bottom:12px; color:#ccc; line-height:1.4;">
+            Our premium customized AI workstations are in high demand. Secure your stock and lock the best price before it changes.
+        </p>
+        <div style="width:50px; height:2px; background:var(--gold); margin:0 auto 12px auto; opacity:0.5;"></div>
+        <p style="font-size:14px; margin-bottom:20px; line-height:1.5; color:#fff;">
+            रुकिए! अपना मनपसंद मॉडल हाथ से न जाने दें। लिमिटेड स्टॉक के कारण प्राइस या मॉडल बदल सकते हैं। कोई डाउट है? अभी हमारे IT एक्सपर्ट से बात करें।
+        </p>
+        <div style="display:flex; gap:10px; justify-content:center; margin-bottom:12px;">
+            <button onclick="sendDynamicWhatsApp()" class="fomo-btn whatsapp-btn">💬 WhatsApp</button>
+            <button onclick="window.location.href='tel:+919920300531'" class="fomo-btn call-btn">📞 Call Expert</button>
+        </div>
+        <div style="margin-bottom: 5px;">
+            <button onclick="document.getElementById('fomoPopup').style.display='none';" style="background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); color:#fff; padding:8px 15px; border-radius:6px; cursor:pointer; font-size:13px; width:100%; transition:0.3s;">
+                🔍 Let Me Recheck Specs
+            </button>
+        </div>
+    </div>
+</div>
+
+<div id="kkt-lightbox" class="kkt-lb-overlay">
+    <div class="kkt-lb-close" id="lb-close-btn">✖</div>
+    <div class="kkt-lb-nav left" id="lb-prev-btn">❮</div>
+    <div class="kkt-lb-content" id="lb-media-container">
+        </div>
+    <div class="kkt-lb-nav right" id="lb-next-btn">❯</div>
+</div>
+
+<script>
+// --- 1. Background Particles ---
+const pc = document.getElementById('particles');
+for(let i=0; i<18; i++){
+    const p = document.createElement('div');
+    p.className = 'particle';
+    p.style.cssText = `left:${Math.random()*100}%;width:${2+Math.random()*4}px;height:${2+Math.random()*4}px;animation-duration:${9+Math.random()*12}s;animation-delay:${Math.random()*12}s;opacity:${.12+Math.random()*.25}`;
+    if(pc) pc.appendChild(p);
+}
+
+// --- 2. Dynamic Setup Switcher & Matrix Pricing ---
+const KKT_MAIN_BASE_PRICE = 145000; 
+const DEDUCTION_SINGLE_CPU = 20000; 
+const DEDUCTION_32GB_RAM   = 15000; 
+
+const DISCOUNT_MATRIX = {
+    'dual_64':   { 2: 8500, 3: 13000, 4: 18000 },
+    'dual_32':   { 2: 9000, 3: 14000, 4: 19000 },
+    'single_64': { 2: 9000, 3: 14000, 4: 19000 },
+    'single_32': { 2: 9000, 3: 14000, 4: 19000 }
+};
+
+// 🖥️ T5810 PRICING — Yaha apne actual price daal dena (abhi placeholder hai)
+const KKT_T5810_BASE_PRICE = 84500;
+const DEDUCTION_T5810_32GB_RAM = 15000;
+
+const DISCOUNT_MATRIX_T5810 = {
+    'ram_64': { 2: 8500, 3: 13000, 4: 18000 },
+    'ram_32': { 2: 8500, 3: 13000, 4: 18000 }
+};
+
+let selCpu = 'dual', selRam = '64', selQty = 1;
+
+function setKktConfig(type, value) {
+    if (type === 'cpu') {
+        selCpu = value;
+        document.getElementById('cfg-cpu-dual').classList.remove('active-cpu');
+        document.getElementById('cfg-cpu-single').classList.remove('active-cpu');
+        document.getElementById('cfg-cpu-' + value).classList.add('active-cpu');
+    } else if (type === 'ram') {
+        selRam = value;
+        document.getElementById('cfg-ram-64').classList.remove('active-ram');
+        document.getElementById('cfg-ram-32').classList.remove('active-ram');
+        document.getElementById('cfg-ram-' + value).classList.add('active-ram');
+    } else if (type === 'qty') {
+        selQty = value;
+        for(let i=1; i<=4; i++) document.getElementById('cfg-qty-' + i).classList.remove('active-qty');
+        document.getElementById('cfg-qty-' + value).classList.add('active-qty');
+    }
+    calculatePricing();
+    updateTechSpecsTab(); // Sync tab specs
+}
+
+function calculatePricing() {
+    const formatINR = (val) => '₹ ' + Math.round(val).toLocaleString('en-IN');
+    let isT5810 = (window.activeServerModel === 't5810');
+    let configKey, currentBase, discountMatrixToUse;
+
+    if (isT5810) {
+        configKey = 'ram_' + selRam;
+        currentBase = KKT_T5810_BASE_PRICE;
+        if (selRam === '32') currentBase -= DEDUCTION_T5810_32GB_RAM;
+        discountMatrixToUse = DISCOUNT_MATRIX_T5810;
+    } else {
+        configKey = selCpu + '_' + selRam;
+        currentBase = KKT_MAIN_BASE_PRICE;
+        if (selCpu === 'single') currentBase -= DEDUCTION_SINGLE_CPU;
+        if (selRam === '32')     currentBase -= DEDUCTION_32GB_RAM;
+        discountMatrixToUse = DISCOUNT_MATRIX;
+    }
+    
+    let rawTotal = currentBase * selQty;
+    let discountValue = (selQty > 1) ? (discountMatrixToUse[configKey][selQty] || 0) : 0;
+    let finalTotal = rawTotal - discountValue;
+
+    const valOrig = document.getElementById('valOriginalPayable');
+    const valFinal = document.getElementById('valFinalPayable');
+    const discTag = document.getElementById('discountTag');
+    const discAmt = document.getElementById('discountAmount');
+
+    if(valOrig) {
+        valOrig.innerText = formatINR(rawTotal);
+        valOrig.style.display = (discountValue > 0) ? 'block' : 'none';
+    }
+    if(valFinal) valFinal.innerText = formatINR(finalTotal);
+    
+    if(discTag) {
+        if (discountValue > 0) {
+            discTag.style.display = 'block';
+            if(discAmt) discAmt.innerText = formatINR(discountValue);
+        } else {
+            discTag.style.display = 'none';
+        }
+    }
+}
+
+function updateTechSpecsTab() {
+    let cpuText = (selCpu === 'single') ? 'Single Xeon Gold 6138 (20C/40T)' : 'Dual Xeon Gold 6138 (40C/80T)';
+    let ramText = selRam + 'GB DDR4 ECC Server Memory';
+    let elCpu = document.getElementById('tab-spec-cpu');
+    let elRam = document.getElementById('tab-spec-ram');
+    if(elCpu && window.activeServerModel !== 't5810') elCpu.innerText = cpuText;
+    if(elRam && window.activeServerModel !== 't5810') elRam.innerText = ramText;
+}
+
+// --- 3. Dynamic WhatsApp Auto-Quotation ---
+function sendDynamicWhatsApp() {
+    let isT5810 = (window.activeServerModel === 't5810');
+    let platformTitle = isT5810 ? "🖥️ DELL PRECISION T5810 WORKSTATION" : "🖥️ DELL PRECISION 7920 WORKSTATION";
+    
+    let cpuName = isT5810 ? "Xeon E5 2697 V4 (18 Core / 36 Thread)" : (selCpu === 'dual' ? "Dual Xeon Gold 6138 (40 Core / 80 Thread)" : "Single Xeon Gold 6138 (20 Core / 40 Thread)");
+    let ramName = isT5810 ? "32GB DDR4 ECC Server RAM" : (selRam + "GB DDR4 ECC Server RAM");
+    let ssdName = isT5810 ? "512GB SSD" : "512 GB NVMe SSD";
+    let gpuName = isT5810 ? "Nvidia Quadro M4000 8GB" : "Nvidia Quadro P4000 8GB";
+    let osName = isT5810 ? "Windows 11 Pro" : "Windows 11 Pro";
+    let powerName = isT5810 ? "80-Plus Gold PSU" : "1400W SMPS";
+    let warrantyName = isT5810 ? "1 Month Warranty" : "Standard Warranty";
+
+    let finalPriceText = document.getElementById('valFinalPayable') ? document.getElementById('valFinalPayable').innerText : '₹ 0';
+    let originalPriceText = document.getElementById('valOriginalPayable') ? document.getElementById('valOriginalPayable').innerText : finalPriceText;
+    let discountAmountText = document.getElementById('discountAmount') ? document.getElementById('discountAmount').innerText : '₹ 0';
+    
+    let originalPayableElem = document.getElementById('valOriginalPayable');
+    let hasDiscount = (originalPayableElem && originalPayableElem.style.display !== 'none');
+
+    let msg = `Hello KKT Team, 🚀\nI am interested in booking this Workstation:\n\n`;
+    msg += `*PLATFORM:* ${platformTitle}\n=================================\n\n`; 
+    msg += `*⚙️ HARDWARE CONFIGURATION:*\n▫️ *CPU:* ${cpuName}\n▫️ *RAM:* ${ramName}\n▫️ *SSD:* ${ssdName}\n▫️ *GPU:* ${gpuName}\n▫️ *OS:* ${osName}\n▫️ *Power:* ${powerName}\n▫️ *Warranty:* ${warrantyName}\n▫️ *Quantity:* ${selQty} Unit(s)\n=================================\n\n`; 
+    msg += `*📊 BILLING SUMMARY:*\n`;
+    
+    if (hasDiscount && originalPriceText !== finalPriceText) {
+        msg += `▪️ Original Total: ${originalPriceText}\n▪️ Bulk Discount: - ${discountAmountText}\n`;
+    }
+    msg += `*✔️ FINAL NET PAYABLE: ${finalPriceText}*\n=================================\n\nPlease confirm the stock availability.`;
+    
+    window.open(`https://wa.me/919920300531?text=${encodeURIComponent(msg)}`, '_blank');
+    
+    let fomo = document.getElementById('fomoPopup');
+    if(fomo) fomo.style.display = 'none';
+}
+
+// --- 4. Language Switcher & Security ---
+function changeKktLanguage(langCode) {
+    sessionStorage.setItem('kkt_lang', langCode);
+    if (langCode === 'en') {
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; domain=" + location.hostname + "; path=/;";
+    }
+    let googleSelect = document.querySelector(".goog-te-combo");
+    if (googleSelect) {
+        googleSelect.value = langCode;
+        googleSelect.dispatchEvent(new Event("change"));
+    } else {
+        setTimeout(() => changeKktLanguage(langCode), 500); 
+    }
+}
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+['copy', 'cut', 'paste'].forEach(ev => document.addEventListener(ev, e => e.preventDefault()));
+document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey || e.metaKey) {
+        if (['c', 'x', 'v', 'u', 's'].includes(e.key.toLowerCase())) e.preventDefault();
+    }
+    if (e.key === 'F12' || ((e.ctrlKey || e.metaKey) && e.shiftKey && ['i', 'j', 'c'].includes(e.key.toLowerCase()))) {
+        e.preventDefault();
+    }
+});
+
+// --- 5. FOMO Exit Intent (Desktop Mouse-Leave + Mobile Back-Button) ---
+let fomoShownModels = { '7920': false, 't5810': false };
+
+document.addEventListener('mouseleave', function(e) {
+    let model = window.activeServerModel || '7920';
+    if (e.clientY < 20 && !fomoShownModels[model]) {
+        document.getElementById('fomoPopup').style.display = 'flex';
+        fomoShownModels[model] = true;
+    }
+});
+
+window.addEventListener('load', function() {
+    history.pushState({ kktGuard: true }, '', location.href);
+});
+
+window.addEventListener('popstate', function(e) {
+    const lb = document.getElementById('kkt-lightbox');
+    let model = window.activeServerModel || '7920';
+    if (lb && lb.classList.contains('active')) {
+        if (window.kktCloseLightbox) window.kktCloseLightbox();
+        history.pushState({ kktGuard: true }, '', location.href);
+        return;
+    }
+    if (!fomoShownModels[model]) {
+        document.getElementById('fomoPopup').style.display = 'flex';
+        fomoShownModels[model] = true;
+        history.pushState({ kktGuard: true }, '', location.href);
+        return;
+    }
+});
+
+// 🚀 MOBILE BACK-BUTTON TRAP
+history.pushState({ kktGuard: true }, '', location.href);
+
+window.addEventListener('popstate', function(e) {
+    const lightboxOverlay = document.getElementById('kkt-lightbox');
+    let model = window.activeServerModel || '7920';
+
+    if (lightboxOverlay && lightboxOverlay.classList.contains('active')) {
+        // Lightbox apna guard khud consume karega, dobara push nahi karna
+        if (window.kktCloseLightbox) window.kktCloseLightbox();
+    } else if (!fomoShownModels[model]) {
+        document.getElementById('fomoPopup').style.display = 'flex';
+        fomoShownModels[model] = true;
+        history.pushState({ kktGuard: true }, '', location.href);
+    }
+});
+
+function switchKktTab(tabId) {
+    document.querySelectorAll('.kkt-tab-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.kkt-tab-pane').forEach(pane => pane.classList.remove('active'));
+    document.getElementById('btn-tab-' + tabId).classList.add('active');
+    document.getElementById('pane-' + tabId).classList.add('active');
+} 
+
+// --- 6. The Master Lightbox Engine (Zoom/Swipe/Pinch) ---
+let lbCurrentScale = 1;
+function openKktLightbox(mediaUrl, mediaType) {
+    const overlay = document.getElementById('kkt-lightbox');
+    const container = document.getElementById('lb-media-container');
+    container.innerHTML = ''; 
+    lbCurrentScale = 1; 
+    history.pushState({ kktLightboxGuard: true }, '', location.href); 
+
+    const type = getMediaType(mediaUrl); // हमेशा लिंक से खुद पहचानो, बाहर से आया parameter भरोसे लायक नहीं
+
+    if (type === 'video') {
+        container.innerHTML = `<video controls autoplay muted playsinline preload="auto" style="max-width:90vw; max-height:90vh;"><source src="${mediaUrl}"></video>`;
+    } else if (type === '360') {
+        container.innerHTML = `<iframe src="${mediaUrl}" style="width:90vw; height:90vh; border:none;" allowfullscreen></iframe>`;
+    } else {
+        container.innerHTML = `<img src="${mediaUrl}" alt="KKT Workstation" style="max-width:90vw; max-height:90vh; transition: transform 0.1s ease-out; transform-origin: center center;">`;
+    }
+
+    overlay.style.display = 'flex'; 
+    setTimeout(() => {
+        overlay.classList.add('active');
+    }, 15);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const overlay = document.getElementById('kkt-lightbox');
+    const closeBtn = document.getElementById('lb-close-btn');
+    const container = document.getElementById('lb-media-container');
+
+    const closeLightbox = () => {
+        overlay.classList.remove('active');
+        setTimeout(() => { overlay.style.display = 'none'; }, 300);
+        container.innerHTML = ''; 
+        lbCurrentScale = 1; 
+    };
+    window.kktCloseLightbox = closeLightbox;
+    window.kktCloseLightbox = closeLightbox;
+    window.kktCloseLightbox = closeLightbox;
+
+    if(closeBtn) closeBtn.addEventListener('click', closeLightbox);
+        if(overlay) {
+            overlay.addEventListener('click', (e) => {
+                const tag = e.target.tagName;
+                if (tag !== 'IMG' && tag !== 'VIDEO' && tag !== 'IFRAME') closeLightbox();
+            });
+        }
+
+        // 🚀 PRO FIX: Next/Prev Navigation inside Lightbox
+        const nextBtn = document.getElementById('lb-next-btn');
+        const prevBtn = document.getElementById('lb-prev-btn');
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation(); // क्लिक को पीछे जाने से रोके
+                kktMediaIndex = (kktMediaIndex + 1) % kktMediaGallery.length;
+                let item = kktMediaGallery[kktMediaIndex];
+                openKktLightbox(item.url, item.type); // पॉपअप में नया मीडिया लोड करें
+                showKktMedia(kktMediaIndex); // पीछे मेन स्क्रीन को भी सिंक करें
+            });
+        }
+        if (prevBtn) {
+            prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                kktMediaIndex = (kktMediaIndex - 1 + kktMediaGallery.length) % kktMediaGallery.length;
+                let item = kktMediaGallery[kktMediaIndex];
+                openKktLightbox(item.url, getMediaType(item.url));
+                showKktMedia(kktMediaIndex); 
+            });
+        }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && overlay && overlay.classList.contains('active')) closeLightbox();
+    });
+
+    // Mouse Wheel Zoom
+    if(container) {
+        container.addEventListener('wheel', (e) => {
+            if (!overlay.classList.contains('active')) return;
+            e.preventDefault(); 
+            let mediaElem = container.querySelector('img');
+            if (!mediaElem) return; // Only zoom images
+            lbCurrentScale += (e.deltaY < 0) ? 0.15 : -0.15;
+            lbCurrentScale = Math.max(1, Math.min(lbCurrentScale, 4));
+            mediaElem.style.transform = `scale(${lbCurrentScale})`;
+        }, { passive: false });
+
+        // Mobile Swipe (Next/Prev handling could be added here if linked to main array, but keeping it simple for zoom)
+        let touchStartX = 0, initialDist = 0, swipeStartX = null;
+        container.addEventListener('touchstart', (e) => {
+            if(e.touches.length === 2) {
+                initialDist = Math.hypot(e.touches[0].pageX - e.touches[1].pageX, e.touches[0].pageY - e.touches[1].pageY);
+                swipeStartX = null;
+            } else if (e.touches.length === 1) {
+                initialDist = 0;
+                swipeStartX = e.touches[0].pageX;
+            }
+        }, { passive: true });
+
+        container.addEventListener('touchmove', (e) => {
+            if (e.touches.length === 2) {
+                e.preventDefault(); 
+                let mediaElem = container.querySelector('img');
+                if(!mediaElem) return;
+                let currentDist = Math.hypot(e.touches[0].pageX - e.touches[1].pageX, e.touches[0].pageY - e.touches[1].pageY);
+                let newScale = lbCurrentScale * (currentDist / initialDist);
+                newScale = Math.max(1, Math.min(newScale, 4));
+                mediaElem.style.transform = `scale(${newScale})`;
+            }
+        }, { passive: false });
+        
+        container.addEventListener('touchend', (e) => {
+            if (e.touches.length < 2) {
+                let mediaElem = container.querySelector('img');
+                if(mediaElem) lbCurrentScale = parseFloat(mediaElem.style.transform.replace(/[^0-9.]/g, '')) || 1;
+            }
+
+            // 🚀 Single-finger Swipe Next/Prev
+            if (initialDist === 0 && swipeStartX !== null) {
+                let swipeEndX = e.changedTouches[0].pageX;
+                let deltaX = swipeEndX - swipeStartX;
+                if (Math.abs(deltaX) > 50 && lbCurrentScale <= 1) {
+                    if (deltaX < 0) {
+                        document.getElementById('lb-next-btn')?.click();
+                    } else {
+                        document.getElementById('lb-prev-btn')?.click();
+                    }
+                }
+            }
+            swipeStartX = null;
+        }, { passive: true });
+    }
+});
+
+
+// --- 7. KKT PRO MEDIA GALLERY ENGINE (Triggering Lightbox) ---
+const kktMediaGallery = [
+    { url: 'https://i.dell.com/is/image/DellContent/content/dam/global-site-design/product_images/dell_client_products/workstations/precision_workstations/7920_tower/global_spi/desktop-precision-7920-tower-campaign-hero-504x350.png', thumb: 'https://i.dell.com/is/image/DellContent/content/dam/global-site-design/product_images/dell_client_products/workstations/precision_workstations/7920_tower/global_spi/desktop-precision-7920-tower-campaign-hero-504x350.png' },
+    { url: 'https://res.cloudinary.com/dje4iytsn/video/upload/v1783873773/TITAN_360_RX_LCD10.webm', thumb: 'https://images.unsplash.com/photo-1550052558-124b8981bf9a?w=150' },
+    { url: 'https://momento360.com/e/u/c12401662589410383ea3521262d1061', thumb: 'https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=150' }
+];
+
+let kktMediaIndex = 0;
+let kktPlayTimer = null;
+let kktIsManualOverride = false;
+
+// --- REST OF YOUR LOGIC (INTACT) ---
+function initKktGallery() {
+    const activeGallery = (window.activeServerModel === 't5810') ? GALLERY_T5810 : GALLERY_7920;
+    kktMediaGallery.length = 0;
+    kktMediaGallery.push(...activeGallery);
+    renderKktThumbs();
+    showKktMedia(0);
+    startKktAutoPlay();
+}
+
+function renderKktThumbs() {
+    const thumbRow = document.getElementById('kkt-thumb-row');
+    if(!thumbRow) return;
+    const gallery = (window.activeServerModel === 't5810') ? GALLERY_T5810 : GALLERY_7920;
+    
+    let html = '';
+    gallery.forEach((item, idx) => {
+        let type = getMediaType(item.url);
+        // 🚀 PRO FIX: अगर इमेज है, तो कोई आइकन नहीं दिखेगा। सिर्फ वीडियो/360 के लिए आइकन आएगा।
+        let icon = '';
+        if (type === 'video') icon = '<div class="kkt-media-icon">▶️</div>';
+        else if (type === '360') icon = '<div class="kkt-media-icon">🔄</div>';
+        
+        // 🎬 वीडियो के लिए ओरिजिनल फाइल को सीधे <img> में नहीं डालेंगे (वो टूटी हुई इमेज दिखाएगा), खाली छोड़ेंगे — नीचे ऑटो-जनरेट होगा
+        let thumbSrc = (type === 'video') ? '' : item.url;
+        html += `<div class="kkt-thumb" id="kkt-thumb-${idx}" onclick="manualKktMediaSelect(${idx})">
+                    <img id="kkt-thumb-img-${idx}" src="${thumbSrc}" style="width:100%; height:100%; object-fit:cover; background:#000;">
+                    ${icon}
+                 </div>`;
+    });
+    thumbRow.innerHTML = html;
+
+    // 🎬 हर वीडियो के लिए असली वीडियो फ्रेम से ऑटोमेटिक थंबनेल जनरेट करना
+    gallery.forEach((item, idx) => {
+        if (getMediaType(item.url) === 'video') generateKktVideoThumb(item.url, idx);
+    });
+}
+
+function generateKktVideoThumb(videoUrl, idx) {
+    const vid = document.createElement('video');
+    vid.crossOrigin = 'anonymous';
+    vid.muted = true;
+    vid.preload = 'metadata';
+    vid.src = videoUrl;
+    vid.addEventListener('loadeddata', () => {
+        vid.currentTime = Math.min(1, (vid.duration || 2) / 2); // वीडियो के बीच का एक फ्रेम पकड़ना
+    });
+    vid.addEventListener('seeked', () => {
+        try {
+            const canvas = document.createElement('canvas');
+            canvas.width = vid.videoWidth;
+            canvas.height = vid.videoHeight;
+            canvas.getContext('2d').drawImage(vid, 0, 0, canvas.width, canvas.height);
+            const imgEl = document.getElementById('kkt-thumb-img-' + idx);
+            if (imgEl) imgEl.src = canvas.toDataURL('image/jpeg', 0.7);
+        } catch (err) {
+            console.warn('KKT video thumb generate failed:', err);
+        }
+    });
+}
+
+
+// 3. Show Main Media (WITH LIGHTBOX ZOOM POP-UP TRIGGER)
+function showKktMedia(idx) {
+    kktMediaIndex = idx;
+    const mainBox = document.getElementById('kkt-main-media');
+    if(!mainBox) return;
+    const gallery = (window.activeServerModel === 't5810') ? GALLERY_T5810 : GALLERY_7920;
+    const item = gallery[idx];
+    const type = getMediaType(item.url);
+
+    let html = '';
+    if (type === 'video') {
+        html = `<video src="${item.url}" autoplay muted loop playsinline style="width:100%; height:100%; object-fit:cover; border-radius:12px; cursor:pointer;" onclick="openKktLightbox('${item.url}', 'video')"></video>`;
+    } else if (type === '360') {
+        html = `<div style="position:relative; width:100%; height:100%; cursor:pointer;" onclick="openKktLightbox('${item.url}', '360')">
+                  <iframe src="${item.url}" style="width:100%; height:100%; border:none; border-radius:12px; pointer-events:none;"></iframe>
+                  <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); background:rgba(0,184,212,0.95); color:#fff; padding:10px 20px; border-radius:8px; font-size:12px; font-weight:bold;">🔄 360° VIEW</div>
+                </div>`;
+    } else {
+        html = `<img src="${item.url}" style="max-width:100%; max-height:100%; object-fit:contain; filter:drop-shadow(0 15px 25px rgba(0,0,0,0.5)); cursor:pointer;" onclick="openKktLightbox('${item.url}', 'image')">`;
+    }
+    mainBox.innerHTML = html;
+    document.querySelectorAll('.kkt-thumb').forEach((th, i) => th.classList.toggle('active', i === idx));
+}
+
+function manualKktMediaSelect(idx) {
+    kktIsManualOverride = true;
+    stopKktAutoPlay(); 
+    showKktMedia(idx); 
+    // 10 सेकंड बाद ऑटो-प्ले रिज़्यूम
+    setTimeout(() => { kktIsManualOverride = false; startKktAutoPlay(); }, 10000);
+}
+
+function startKktAutoPlay() {
+    stopKktAutoPlay();
+    kktPlayTimer = setInterval(() => {
+        const gallery = (window.activeServerModel === 't5810') ? GALLERY_T5810 : GALLERY_7920;
+        let nextIdx = (kktMediaIndex + 1) % gallery.length;
+        showKktMedia(nextIdx);
+    }, 4500); 
+}
+
+function stopKktAutoPlay() { if (kktPlayTimer) clearInterval(kktPlayTimer); }
+
+// --- 8. Dynamic Content Database & Switcher ---
+window.activeServerModel = '7920';
+let backup7920Feat = "", backup7920Tech = "";
+
+const GALLERY_T5810 = [
+    { url: 'https://res.cloudinary.com/dje4iytsn/image/upload/v1784203829/T5810_1.png' },
+    { url: 'https://res.cloudinary.com/dje4iytsn/image/upload/v1784203830/T5810_2.png' },
+    { url: 'https://res.cloudinary.com/dje4iytsn/image/upload/v1784203831/T5810_3.png' },
+    { url: 'https://res.cloudinary.com/dje4iytsn/image/upload/v1784203831/T5810_4.png' },
+    { url: 'https://res.cloudinary.com/dje4iytsn/image/upload/v1784203832/T5810_5.png' },
+    { url: "https://res.cloudinary.com/dje4iytsn/video/upload/v1784203649/Dell_Precision_Tower_5810__Install_Graphics_Card.mp4" }
+];
+const GALLERY_7920 = [
+    { url: 'https://res.cloudinary.com/dje4iytsn/image/upload/v1784206015/7290_1.png'},
+     { url: "https://res.cloudinary.com/dje4iytsn/image/upload/v1784206017/7290_5.png"},
+      { url: "https://res.cloudinary.com/dje4iytsn/image/upload/v1784206017/7290_2.png"},
+      { url: "https://res.cloudinary.com/dje4iytsn/image/upload/v1784206017/7290_4.png"},
+      { url: "https://res.cloudinary.com/dje4iytsn/image/upload/v1784206116/71vcReaUsAL._AC_SL1200_-Photoroom.png"},
+      { url: "https://res.cloudinary.com/dje4iytsn/video/upload/v1784189414/Precision_7920_2017_Product_Overview.mp4"}
+];
+
+function getMediaType(url) {
+    let clean = url.split('?')[0].split('#')[0].toLowerCase();
+    if (/\.(mp4|webm|ogv|mov|m4v)$/.test(clean) || clean.includes('/video/upload/')) return 'video';
+    if (clean.includes('momento360')) return '360';
+    if (/\.(jpg|jpeg|png|gif|webp|avif|svg)$/.test(clean)) return 'image';
+    return 'image';
+}
+
+const HTML_FEAT_T5810 = `
+<ul class="kkt-pro-feat-list" style="margin-top:10px; list-style: none;">
+    <li><strong>Intel Xeon E5-2697 V4:</strong> Massive 18-Core, 36-Thread compute engine based on the highly efficient Broadwell-EP architecture.</li>
+    <li><strong>High Turbo Clocks:</strong> Intelligent CPU frequency scaling up to 3.60 GHz for latency-sensitive single-threaded applications.</li>
+    <li><strong>45MB Intel Smart Cache:</strong> Massive L3 cache pool shared across all cores to accelerate repetitive render calculations.</li>
+    <li><strong>Advanced Vector Extensions (AVX 2.0):</strong> Hardware-level acceleration for complex 3D math, scientific simulations, and video transcoding.</li>
+    <li><strong>Quadro M4000 8GB VRAM:</strong> Enterprise-class Maxwell architecture GPU providing flawless viewport smoothness in heavy 3D scenes.</li>
+    <li><strong>1664 NVIDIA CUDA Cores:</strong> Massive parallel processing capabilities for GPU-accelerated rendering in Premiere Pro, Blender, and V-Ray.</li>
+    <li><strong>Multi-Display Dominance:</strong> Native support for up to four 4K (4096x2160) displays simultaneously via standard DisplayPort 1.2 connections.</li>
+    <li><strong>32GB DDR4 ECC Registered RAM:</strong> Enterprise-grade memory that automatically detects and corrects single-bit data errors in real-time.</li>
+    <li><strong>Quad-Channel Memory Controller:</strong> 4 independent memory pathways directly to the CPU, maximizing bandwidth and eliminating bottlenecks.</li>
+    <li><strong>RMT Pro (Reliable Memory Technology):</strong> Dell's proprietary BIOS feature that maps out defective memory sectors to prevent blue-screen crashes.</li>
+    <li><strong>Expandable RAM Headroom:</strong> 8 DIMM slots allow future RAM upgrades up to a staggering 256GB for extreme workloads.</li>
+    <li><strong>Blazing Fast 512GB SSD:</strong> Instantaneous OS boot-up, fast application launches, and rapid asset loading for zero workflow delay.</li>
+    <li><strong>Tool-less Mid-Tower Chassis:</strong> Precision-engineered latch system allows you to upgrade RAM, GPUs, and drives without using a single screwdriver.</li>
+    <li><strong>Intel C612 Enterprise Chipset:</strong> Server-grade motherboard chipset designed specifically for maximum stability under 24/7 uninterrupted operation.</li>
+    <li><strong>Optimized PCIe Gen 3.0 Lanes:</strong> Dual x16 slots ensure maximum unrestricted bandwidth to your Quadro GPU and other high-speed add-in cards.</li>
+    <li><strong>Isolated Thermal Zones:</strong> Dedicated cooling pathways for the CPU/RAM and Power Supply to prevent cross-component heat saturation.</li>
+    <li><strong>Acoustically Tuned Design:</strong> Specialized chassis baffling and premium fans keep the workstation whisper-quiet even under 100% CPU/GPU load.</li>
+    <li><strong>80-PLUS Gold Power Supply:</strong> High-efficiency, externally accessible PSU that minimizes wasted electricity and reduces internal heat generation.</li>
+    <li><strong>ISV Certified Reliability:</strong> Rigorously tested and certified by Adobe, Autodesk, and Dassault Systèmes to guarantee software stability.</li>
+    <li><strong>Dell Precision Optimizer:</strong> AI-driven software that automatically tunes system settings for the specific creative application you are running.</li>
+    <li><strong>Integrated Gigabit Ethernet:</strong> Intel i217 Enterprise MAC for ultra-fast, low-latency network rendering and NAS storage connections.</li>
+    <li><strong>Hardware Video Encoding (NVENC):</strong> Dedicated GPU silicon for exporting high-bitrate 4K videos without stressing the Xeon processor.</li>
+    <li><strong>High-Speed Front I/O:</strong> Conveniently located USB 3.0 ports and HD audio jacks on the front panel for easy peripheral access.</li>
+    <li><strong>Robust Data Security:</strong> Integrated TPM (Trusted Platform Module) providing hardware-level cryptographic keys for BitLocker drive encryption.</li>
+    <li><strong>Solid Aluminum Handles:</strong> Built right into the chassis structure, allowing easy and secure transport of this heavy-duty machine.</li>
+    <li><strong>Smart Fan Curves:</strong> Motherboard sensors dynamically adjust individual fan speeds based on real-time localized temperatures.</li>
+    <li><strong>Built-in Hardware Diagnostics:</strong> Pre-OS diagnostic tool to instantly check RAM, CPU, and HDD health without needing to boot into Windows.</li>
+    <li><strong>Windows 11 Pro Compatibility:</strong> Enterprise-ready OS licensing for advanced networking, Hyper-V virtualization, and corporate domain joins.</li>
+    <li><strong>Vibration-Damped Drive Bays:</strong> Rubberized mounting caddies protect your storage drives from micro-vibrations, extending their lifespan.</li>
+    <li><strong>Heavy-Gauge Steel Frame:</strong> Zero-flex structural rigidity ensures heavy PCIe expansion cards stay perfectly aligned during transport.</li>
+    <li><strong>Massive USB Connectivity:</strong> Up to 10 total USB ports (Front + Rear) to handle all your dongles, tablets, and external drives simultaneously.</li>
+    <li><strong>Intel vPro Technology:</strong> Advanced out-of-band management features for remote IT troubleshooting and BIOS-level access.</li>
+    <li><strong>Cable-free Internal Layout:</strong> Proprietary Dell design routes power directly through the motherboard, eliminating messy cables and improving airflow.</li>
+    <li><strong>Hardware RAID Support:</strong> Integrated SATA controller supports RAID 0, 1, 5, and 10 for absolute data redundancy or extreme striping speed.</li>
+    <li><strong>Direct-Attach GPU Power:</strong> Clean power delivery lines specifically engineered to handle the transient spikes of professional Quadro cards.</li>
+    <li><strong>Legacy Port Support:</strong> Includes PS/2 and Serial ports for connecting older, specialized industrial or scientific equipment.</li>
+    <li><strong>ECC Fault Logging:</strong> The BIOS actively logs any corrected memory errors, allowing you to proactively replace dying RAM sticks before they fail.</li>
+    <li><strong>Lockable Side Panel:</strong> Physical security latch compatible with Kensington locks to prevent unauthorized theft of internal components.</li>
+    <li><strong>3D Stereo Support:</strong> Quadro M4000 supports stereoscopic 3D rendering for scientific visualization and advanced CAD simulations.</li>
+    <li><strong>High Thermal Margin:</strong> Oversized CPU heatsink engineered to handle extended rendering sessions without dropping processor boost clocks.</li>
+    <li><strong>Gold-Plated Connectors:</strong> High-quality internal pin contacts prevent corrosion and ensure perfect electrical conductivity over years of use.</li>
+    <li><strong>Non-Volatile BIOS Settings:</strong> Secure EEPROM storage prevents settings loss even if the CMOS battery completely drains out.</li>
+    <li><strong>Industrial-Grade Capacitors:</strong> Motherboard components rated for high-temperature endurance, vastly outlasting standard consumer PC motherboards.</li>
+    <li><strong>Color-Coded Touch Points:</strong> Blue-accented tabs inside the chassis intuitively guide you to parts that can be removed without tools.</li>
+    <li><strong>Seamless Multi-Tasking:</strong> 36 Threads allow you to render a 3D scene in the background while flawlessly editing 4K video in the foreground.</li>
+    <li><strong>Intel Hyper-Threading:</strong> Effectively doubles the processing queues of the CPU, keeping the execution engines fully fed with data.</li>
+    <li><strong>Chassis Intrusion Switch:</strong> Hardware sensor that logs and alerts you if the side panel was opened without authorization.</li>
+    <li><strong>Fast Boot Architecture:</strong> Optimized UEFI firmware skips redundant checks to bring this workstation from cold-boot to Windows instantly.</li>
+    <li><strong>1-Month Carry-in Warranty:</strong> Complete peace of mind with our shop-level hardware testing and replacement guarantee.</li>
+    <li><strong>Refurbished & Stress-Tested:</strong> Each unit survives a punishing 48-hour synthetic load test to ensure it meets original factory performance.</li>
+</ul>
+`;
+
+const HTML_TECH_T5810 = `
+<div style="margin-bottom: 30px; border: 1px solid rgba(0,184,212,0.3); border-radius: 12px; background: rgba(0,0,0,0.3); overflow: hidden;">
+    <div style="background: rgba(0,184,212,0.1); padding: 10px; text-align: center; font-size: 13px; font-weight: 800; color: var(--brand-new); border-bottom: 1px solid rgba(0,184,212,0.3);">HARDWARE CONFIGURATION</div>
+    <div style="display: grid; grid-template-columns: 1fr 1px 1fr; align-items: center; padding: 10px;">
+        <div style="padding: 10px;">
+            <div style="margin-bottom: 12px; font-size: 13px;"><span style="color:var(--brand-new); margin-right:8px;">🧠</span>CPU: <span style="color:#fff; font-weight:600;">Xeon E5 2697 V4 (18C)</span></div>
+            <div style="margin-bottom: 12px; font-size: 13px;"><span style="color:var(--brand-new); margin-right:8px;">💾</span>RAM: <span style="color:#fff; font-weight:600;">32GB DDR4 ECC</span></div>
+            <div style="font-size: 13px;"><span style="color:var(--brand-new); margin-right:8px;">🛡️</span>Wty: <span style="color:#fff; font-weight:600;">1 Month Carry-in</span></div>
+        </div>
+        <div style="height: 80%; width: 1px; background: rgba(0,184,212,0.3);"></div>
+        <div style="padding: 10px;">
+            <div style="margin-bottom: 12px; font-size: 13px;"><span style="color:var(--brand-new); margin-right:8px;">📂</span>SSD: <span style="color:#fff; font-weight:600;">512GB SSD</span></div>
+            <div style="margin-bottom: 12px; font-size: 13px;"><span style="color:var(--brand-new); margin-right:8px;">🎮</span>GPU: <span style="color:#fff; font-weight:600;">Quadro M4000 8GB</span></div>
+            <div style="font-size: 13px;"><span style="color:var(--brand-new); margin-right:8px;">🪟</span>OS: <span style="color:#fff; font-weight:600;">Windows 11 Pro</span></div>
+        </div>
+    </div>
+</div>
+
+<div class="m-spec-group">Full Technical Specifications</div>
+<div style="margin-top: 10px;">
+    <!-- CPU SPECS -->
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Processor Model:</span><span style="width: 60%; color: #fff;">Intel Xeon E5-2697 v4</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Microarchitecture:</span><span style="width: 60%; color: #fff;">Broadwell-EP (14nm Lithography)</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Core Count:</span><span style="width: 60%; color: #fff;">18 Physical Cores / 36 Logical Threads</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Base Clock Speed:</span><span style="width: 60%; color: #fff;">2.30 GHz (Optimized for rendering)</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Turbo Boost Max:</span><span style="width: 60%; color: #fff;">Up to 3.60 GHz (Single-threaded CAD)</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 CPU Cache:</span><span style="width: 60%; color: #fff;">45 MB Intel Smart Cache</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Thermal Design Power:</span><span style="width: 60%; color: #fff;">145W Peak Power Draw</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Motherboard Chipset:</span><span style="width: 60%; color: #fff;">Intel C612 Enterprise Class Chipset</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 CPU Socket:</span><span style="width: 60%; color: #fff;">FCLGA2011-3 Single Socket Architecture</span></div>
+
+    <!-- MEMORY SPECS -->
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Installed Memory:</span><span style="width: 60%; color: #fff;">32GB DDR4 Server Memory</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Memory Error Correction:</span><span style="width: 60%; color: #fff;">Hardware-level ECC (Error-Correcting Code)</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Memory Speed:</span><span style="width: 60%; color: #fff;">2400 MT/s Data Throughput</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Memory Channels:</span><span style="width: 60%; color: #fff;">Quad-Channel Configuration</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Max Memory Capacity:</span><span style="width: 60%; color: #fff;">Up to 256GB LRDIMM</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 DIMM Slots:</span><span style="width: 60%; color: #fff;">8x Dedicated Slots</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Proprietary Tech:</span><span style="width: 60%; color: #fff;">Dell Reliable Memory Technology (RMT) Pro</span></div>
+
+    <!-- GPU SPECS -->
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Graphics Processor:</span><span style="width: 60%; color: #fff;">NVIDIA Quadro M4000 Enterprise GPU</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 GPU Architecture:</span><span style="width: 60%; color: #fff;">Maxwell GM204GL Silicon</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Video Memory (VRAM):</span><span style="width: 60%; color: #fff;">8GB GDDR5 Dedicated Buffer</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 CUDA Cores:</span><span style="width: 60%; color: #fff;">1664 Parallel Processing Cores</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Memory Bandwidth:</span><span style="width: 60%; color: #fff;">192.0 GB/s Data Transfer Rate</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 GPU Interface:</span><span style="width: 60%; color: #fff;">PCIe 3.0 x16</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Display Outputs:</span><span style="width: 60%; color: #fff;">4x DisplayPort 1.2 (Active Multi-Display)</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Max Resolution:</span><span style="width: 60%; color: #fff;">4096 x 2160 (4K) at 60Hz per display</span></div>
+
+    <!-- STORAGE & I/O -->
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Primary Storage:</span><span style="width: 60%; color: #fff;">512GB Solid State Drive (SSD)</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Storage Interface:</span><span style="width: 60%; color: #fff;">SATA 6.0Gb/s High-Speed Bus</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Hardware RAID Support:</span><span style="width: 60%; color: #fff;">RAID 0, 1, 5, 10 supported via Intel RSTe</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Internal Drive Bays:</span><span style="width: 60%; color: #fff;">Tool-less Modular Bays</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 PCIe Lanes (CPU):</span><span style="width: 60%; color: #fff;">40 PCIe Gen 3.0 Lanes reserved</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Expansion Slots:</span><span style="width: 60%; color: #fff;">2x PCIe x16, 1x PCIe x8, 1x PCIe x4, 1x PCI</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Network Adapter:</span><span style="width: 60%; color: #fff;">Integrated Intel I217-LM Gigabit Ethernet MAC</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Network Speeds:</span><span style="width: 60%; color: #fff;">10/100/1000 Mbps with Wake-on-LAN</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Audio Controller:</span><span style="width: 60%; color: #fff;">Realtek ALC3220 High Definition Audio Codec</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 USB Connectivity:</span><span style="width: 60%; color: #fff;">10 Total (Front & Rear)</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Legacy Port Support:</span><span style="width: 60%; color: #fff;">Serial & PS/2 Ports included</span></div>
+
+    <!-- POWER & BUILD -->
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Power Supply Unit:</span><span style="width: 60%; color: #fff;">80-Plus Gold Modular PSU</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 PSU Efficiency:</span><span style="width: 60%; color: #fff;">90% Efficient</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Power Correction:</span><span style="width: 60%; color: #fff;">Active PFC with auto-sensing</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Chassis Type:</span><span style="width: 60%; color: #fff;">Mid-Tower, Tool-less Access</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Transport Handles:</span><span style="width: 60%; color: #fff;">Integrated solid aluminum handles</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Cooling Architecture:</span><span style="width: 60%; color: #fff;">Multi-channel Active Airflow</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Acoustics:</span><span style="width: 60%; color: #fff;">Whisper-quiet operation (<30 dB)</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Hardware Security:</span><span style="width: 60%; color: #fff;">TPM 1.2/2.0 chip, Kensington slot</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 BIOS Security:</span><span style="width: 60%; color: #fff;">Setup Password, Chassis Intrusion Switch</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Firmware System:</span><span style="width: 60%; color: #fff;">Dell UEFI Diagnostic System</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Operating System:</span><span style="width: 60%; color: #fff;">Windows 11 Pro 64-bit Compatible</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Enterprise Software:</span><span style="width: 60%; color: #fff;">Dell Precision Optimizer</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 ISV Certification:</span><span style="width: 60%; color: #fff;">Certified for Autodesk, Adobe</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Operating Temperature:</span><span style="width: 60%; color: #fff;">5°C to 35°C</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Durability Standard:</span><span style="width: 60%; color: #fff;">MIL-STD 810G military spec tested</span></div>
+    <div style="display: flex; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);"><span style="width: 40%; color: var(--gold); font-weight:700;">🔥 Warranty Provided:</span><span style="width: 60%; color: #fff;">1-Month Carry-in Hardware Validation Warranty</span></div>
+</div>
+`;
+
+function switchModel(model) {
+    window.activeServerModel = model;
+    document.querySelectorAll('.model-select-box .setup-btn').forEach(btn => btn.classList.remove('active'));
+    document.getElementById('btn-' + model).classList.add('active');
+
+    const cpuGroup = document.querySelector('.config-group');
+    const featPane = document.getElementById('pane-feat');
+    const techPane = document.getElementById('pane-tech');
+
+    if (model === 't5810') {
+        cpuGroup.style.display = 'none';
+        document.querySelector('.pkg-title').innerText = "Dell Precision T5810 Workstation";
+        if(featPane) featPane.innerHTML = HTML_FEAT_T5810;
+        if(techPane) techPane.innerHTML = HTML_TECH_T5810;
+        kktMediaGallery.length = 0;
+        kktMediaGallery.push(...GALLERY_T5810);
+    } else {
+        cpuGroup.style.display = 'block';
+        document.querySelector('.pkg-title').innerText = "Dell Precision 7920 Tower";
+        if(featPane && backup7920Feat !== "") featPane.innerHTML = backup7920Feat;
+        if(techPane && backup7920Tech !== "") techPane.innerHTML = backup7920Tech;
+        kktMediaGallery.length = 0;
+        kktMediaGallery.push(...GALLERY_7920);
+    }
+    initKktGallery();
+    calculatePricing();
+}
+
+// --- 9. Initialization (On Page Load) ---
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(() => {
+        let featPane = document.getElementById('pane-feat');
+        let techPane = document.getElementById('pane-tech');
+        if(featPane) backup7920Feat = featPane.innerHTML;
+        if(techPane) backup7920Tech = techPane.innerHTML;
+    }, 500);
+
+    initKktGallery();
+    calculatePricing();
+    
+    let savedLang = sessionStorage.getItem('kkt_lang');
+    let langSelect = document.getElementById('customLangSelect');
+    if (savedLang && langSelect) {
+        langSelect.value = savedLang;
+        setTimeout(() => changeKktLanguage(savedLang), 800);
+    } else if (langSelect) {
+        langSelect.value = 'en';
+    }
+});
+
+</script>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'en,hi,mr,gu,ta', autoDisplay: false }, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>
