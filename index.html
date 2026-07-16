@@ -1489,6 +1489,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && overlay && overlay.classList.contains('active')) closeLightbox();
+        if (overlay && overlay.classList.contains('active')) {
+            if (e.key === 'ArrowRight') { const nb = document.getElementById('lb-next-btn'); if (nb) nb.click(); }
+            if (e.key === 'ArrowLeft')  { const pb = document.getElementById('lb-prev-btn'); if (pb) pb.click(); }
+        }
     });
 
     // Mouse Wheel Zoom
